@@ -51,9 +51,9 @@ export default function Service() {
           </div>
           <h3>SMM (Social Media Marketing)</h3>
           <p>
-            We leverage social media platforms to enhance your brand's online
-            presence, engage with your audience, and drive business growth
-            through targeted social media strategies.
+            We leverage social media platforms to enhance your brand&apos;s
+            online presence, engage with your audience, and drive business
+            growth through targeted social media strategies.
           </p>
         </div>
 
