@@ -2,32 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@layer base {
+  :root {
+    --font-futura: "FuturaPTBook", sans-serif;
+    --font-grace: "Ethnocentric", sans-serif;
+    --text: #0f181a;
+    --background: #fcfdfd;
+    --primary: #14d7e1;
+    --secondary: #9fd5d6;
+    --accent: #7ecace;
+  }
+  .dark {
+    --font-futura: "FuturaPTBook", sans-serif;
+    --font-grace: "Ethnocentric", sans-serif;
+    --text: #e6eff0;
+    --background: #020303;
+    --primary: #1ee1eb;
+    --secondary: #295f60;
+    --accent: #317d81;
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: "FuturaPTBook";
+  src: url("/fonts/FuturaPTBook.otf");
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: FuturaPTBook;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+*::selection{
+  background-color: var(--secondary);
+}
+
+.font-grace {
+  font-family: var(--font-grace);
 }
