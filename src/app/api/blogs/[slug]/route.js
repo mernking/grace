@@ -1,9 +1,6 @@
 import connectToDatabase from "../../../../../lib/mongoose";
 import Blog from "../../../../../models/blog";
 
-// kings slug sheet
-
-
 
 // Fetch all blog slugs
 async function fetchBlogSlugs() {
@@ -25,7 +22,7 @@ export async function GET(request, { params }) {
   const slug = params.slug;
 
   try {
-    const blog = await Blog.findOne({ slug: slug });
+    const blog = await Blog.findById({ slug: slug });
     if (!blog) {
       return new Response(
         JSON.stringify({ error: `Blog with slug ${slug} not found` }),
