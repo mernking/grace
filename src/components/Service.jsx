@@ -13,9 +13,9 @@ export default function Service() {
         <h1>SERVICES</h1>
       </div>
 
-      <div class="services grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
-        <div class="service flex flex-col justify-center items-center w-[300px]">
-          <div class="icon rounded-full px-2 py-2 text-3xl">
+      <div className="services grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
+        <div className="service flex flex-col justify-center items-center w-[300px]">
+          <div className="icon rounded-full px-2 py-2 text-3xl">
             <BsVectorPen />
           </div>
           <h3>WEBSITE DESIGN</h3>
@@ -24,19 +24,19 @@ export default function Service() {
             aesthetic appeal and user experience to enhance ROI.
           </p>
         </div>
-        <div class="service flex flex-col justify-center items-center w-[300px]">
-          <div class="icon rounded-full px-2 py-2 text-3xl">
+        <div className="service flex flex-col justify-center items-center w-[300px]">
+          <div className="icon rounded-full px-2 py-2 text-3xl">
             <IoCodeSlashOutline />
           </div>
           <h3>WEBSITE DEVELOPMENT</h3>
           <p>
-            We develop web apps and SEO-optimized websites to elevate your brand above
-            competitors, ensuring superior online visibility and business
+            We develop web apps and SEO-optimized websites to elevate your brand
+            above competitors, ensuring superior online visibility and business
             growth.
           </p>
         </div>
-        <div class="service flex flex-col justify-center items-center w-[300px]">
-          <div class="icon rounded-full px-2 py-2 text-3xl">
+        <div className="service flex flex-col justify-center items-center w-[300px]">
+          <div className="icon rounded-full px-2 py-2 text-3xl">
             <GrOptimize />
           </div>
           <h3>CRO (Conversion Rate Optimization)</h3>
@@ -45,20 +45,20 @@ export default function Service() {
             ensuring optimal user engagement and satisfaction.
           </p>
         </div>
-        <div class="service flex flex-col justify-center items-center w-[300px]">
-          <div class="icon rounded-full px-2 py-2 text-3xl">
+        <div className="service flex flex-col justify-center items-center w-[300px]">
+          <div className="icon rounded-full px-2 py-2 text-3xl">
             <HiOutlineStatusOnline />
           </div>
           <h3>SMM (Social Media Marketing)</h3>
           <p>
-            We leverage social media platforms to enhance your brand's online
-            presence, engage with your audience, and drive business growth
-            through targeted social media strategies.
+            We leverage social media platforms to enhance your brand&apos;s
+            online presence, engage with your audience, and drive business
+            growth through targeted social media strategies.
           </p>
         </div>
 
-        <div class="service flex flex-col justify-center items-center w-[300px]">
-          <div class="icon rounded-full px-2 py-2 text-3xl">
+        <div className="service flex flex-col justify-center items-center w-[300px]">
+          <div className="icon rounded-full px-2 py-2 text-3xl">
             <FiBriefcase />
           </div>
           <h3>BUSINESS DEVELOPMENT</h3>
@@ -68,8 +68,8 @@ export default function Service() {
             advantage.
           </p>
         </div>
-        <div class="service flex flex-col justify-center items-center w-[300px]">
-          <div class="icon rounded-full px-2 py-2 text-3xl">
+        <div className="service flex flex-col justify-center items-center w-[300px]">
+          <div className="icon rounded-full px-2 py-2 text-3xl">
             <MdOutlineLocationSearching />
           </div>
           <h3>SEM (Search Engine Marketing)</h3>
