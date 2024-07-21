@@ -22,7 +22,7 @@ export async function GET(request, { params }) {
   const slug = params.slug;
 
   try {
-    const blog = await Blog.findOne({ slug: slug });
+    const blog = await Blog.findById({ slug: slug });
     if (!blog) {
       return new Response(
         JSON.stringify({ error: `Blog with slug ${slug} not found` }),
