@@ -1,6 +1,10 @@
 import connectToDatabase from "../../../../../lib/mongoose";
 import Blog from "../../../../../models/blog";
 
+// kings slug sheet
+
+
+
 // Fetch all blog slugs
 async function fetchBlogSlugs() {
   await connectToDatabase();
