@@ -1,7 +1,6 @@
 import connectToDatabase from "../../../../../lib/mongoose";
 import Blog from "../../../../../models/blog";
 
-
 // Fetch all blog slugs
 async function fetchBlogSlugs() {
   await connectToDatabase();
@@ -17,12 +16,15 @@ export async function generateStaticParams() {
   }));
 }
 
+//kings src\app\api\blogs\route.js
+
+
 export async function GET(request, { params }) {
   await connectToDatabase();
   const slug = params.slug;
 
   try {
-    const blog = await Blog.findById({ slug: slug });
+    const blog = await Blog.findOne({ slug: slug });
     if (!blog) {
       return new Response(
         JSON.stringify({ error: `Blog with slug ${slug} not found` }),
