@@ -1,10 +1,10 @@
 import connectToDatabase from "../../../../../lib/mongoose";
-import Blog from "../../../../../models/blog";
+import blog from "../../../../../models/blog";
 
 // Fetch all blog slugs
 async function fetchBlogSlugs() {
   await connectToDatabase();
-  const blogs = await Blog.find({}, "slug").exec();
+  const blogs = await blog.find({}, "slug").exec();
   return blogs.map((blog) => ({ slug: blog.slug }));
 }
 
@@ -12,30 +12,27 @@ async function fetchBlogSlugs() {
 export async function generateStaticParams() {
   const slugs = await fetchBlogSlugs();
   return slugs.map((slugObj) => ({
-    slug: slugObj.slug,
+    params: {
+      slug: slugObj.slug,
+    },
   }));
 }
 
-//kings src\app\api\blogs\route.js
-
-
-export async function GET(request, { params }) {
+// Fetch the blog data for the specific slug
+export async function GET(req, res) {
   await connectToDatabase();
-  const slug = params.slug;
 
-  try {
-    const blog = await Blog.findOne({ slug: slug });
-    if (!blog) {
-      return new Response(
-        JSON.stringify({ error: `Blog with slug ${slug} not found` }),
-        { status: 404 }
-      );
-    }
-    return new Response(JSON.stringify({ blog: blog }), { status: 200 });
-  } catch (error) {
-    return new Response(
-      JSON.stringify({ error: `Error fetching blog with slug ${slug}` }),
-      { status: 500 }
-    );
+  if (req.method !== "GET") {
+    return res.status(405).json({ message: "Method Not Allowed" });
   }
+
+  const slug = req.query; // Get the slug from the query parameters
+  console.log(slug);
+  const blogPost = await blog.findOne({ slug }).lean();
+
+  if (!blogPost) {
+    return Response.json({ message: "Blog not found" });
+  }
+
+  return Response.json(blogPost);
 }
