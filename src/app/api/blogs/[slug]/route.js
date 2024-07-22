@@ -8,6 +8,7 @@ async function fetchBlogSlugs() {
   return blogs.map((blog) => ({ slug: blog.slug }));
 }
 
+
 // Implement the generateStaticParams function
 export async function generateStaticParams() {
   const slugs = await fetchBlogSlugs();
@@ -15,8 +16,6 @@ export async function generateStaticParams() {
     slug: slugObj.slug,
   }));
 }
-
-//kings src\app\api\blogs\route.js
 
 
 export async function GET(request, { params }) {
