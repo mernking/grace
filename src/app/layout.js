@@ -1,8 +1,10 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const futuraPTBook = localFont({
-  src: "./FuturaPTBook.otf",
+  src: "./futuraPTBook.otf",
   variable: "--font-futura",
 });
 
@@ -20,9 +22,15 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`dark bg-background flex flex-col justify-center items-center text-text ${futuraPTBook.variable} ${graceFont.variable}`}
+      className={`dark bg-background font-futura flex flex-col justify-center items-center text-text ${futuraPTBook.variable} ${graceFont.variable}`}
     >
-      <body className="max-w-[1080px] overflow-x-hidden">{children}</body>
+      <body className="max-w-[1080px] overflow-x-hidden">
+        <div className="w-full flex flex-col justify-center items-center">
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }
