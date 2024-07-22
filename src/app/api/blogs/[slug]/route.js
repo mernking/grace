@@ -16,6 +16,9 @@ export async function generateStaticParams() {
   }));
 }
 
+//kings src\app\api\blogs\route.js
+
+
 export async function GET(request, { params }) {
   await connectToDatabase();
   const slug = params.slug;
