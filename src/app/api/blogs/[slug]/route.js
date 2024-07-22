@@ -1,5 +1,7 @@
-import connectToDatabase from "../../../../../lib/mongoose";
-import Blog from "../../../../../models/blog";
+// pages/blogs/[slug].js
+
+import connectToDatabase from "../../../lib/mongoose";
+import Blog from "../../../models/blog";
 
 // Fetch all blog slugs
 async function fetchBlogSlugs() {
@@ -7,7 +9,6 @@ async function fetchBlogSlugs() {
   const blogs = await Blog.find({}, "slug").exec();
   return blogs.map((blog) => ({ slug: blog.slug }));
 }
-
 
 // Implement the generateStaticParams function
 export async function generateStaticParams() {
@@ -17,24 +18,29 @@ export async function generateStaticParams() {
   }));
 }
 
+// Page Component
+const BlogPage = ({ blog }) => {
+  // Render your blog page content here
+  return <div>{blog.title}</div>;
+};
 
-export async function GET(request, { params }) {
+// Fetch the blog data for the specific slug
+export async function getStaticProps({ params }) {
   await connectToDatabase();
   const slug = params.slug;
+  const blog = await Blog.findOne({ slug }).lean();
 
-  try {
-    const blog = await Blog.findOne({ slug: slug });
-    if (!blog) {
-      return new Response(
-        JSON.stringify({ error: `Blog with slug ${slug} not found` }),
-        { status: 404 }
-      );
-    }
-    return new Response(JSON.stringify({ blog: blog }), { status: 200 });
-  } catch (error) {
-    return new Response(
-      JSON.stringify({ error: `Error fetching blog with slug ${slug}` }),
-      { status: 500 }
-    );
+  if (!blog) {
+    return {
+      notFound: true,
+    };
   }
+
+  return {
+    props: {
+      blog: JSON.parse(JSON.stringify(blog)), // serialize the blog data
+    },
+  };
 }
+
+export default BlogPage;
