@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="py-8 flex flex-col justify-center items-center overflow-x-hidden w-full">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         <div className="px-2">
-          <div className="logo_sec font-grace text-3xl">
+          <div className="logo_sec hover:underline hover:text-primary transition-all font-grace text-3xl">
             <h1>GRACE</h1>
           </div>
           <div className="mission">
@@ -21,12 +21,42 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold text-center mb-4">menu</h3>
           <div className="text-center w-full flex flex-col gap-2 px-5 py-2">
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/services">Services</Link>
-            <Link href="/portfolio">Portfio</Link>
-            <Link href="/blog">Blog</Link>
-            <Link href="/contact">Contact</Link>
+            <Link
+              className="hover:underline hover:text-accent transition-all"
+              href="/"
+            >
+              Home
+            </Link>
+            <Link
+              className="hover:underline hover:text-accent transition-all"
+              href="/about"
+            >
+              About
+            </Link>
+            <Link
+              className="hover:underline hover:text-accent transition-all"
+              href="/services"
+            >
+              Services
+            </Link>
+            <Link
+              className="hover:underline hover:text-accent transition-all"
+              href="/portfolio"
+            >
+              Portfio
+            </Link>
+            <Link
+              className="hover:underline hover:text-accent transition-all"
+              href="/blog"
+            >
+              Blog
+            </Link>
+            <Link
+              className="hover:underline hover:text-accent transition-all"
+              href="/contact"
+            >
+              Contact
+            </Link>
           </div>
         </div>
         <div className="text-center flex flex-col justify-center items-center">

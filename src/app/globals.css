@@ -29,7 +29,7 @@
 }
 
 body {
-  font-family: FuturaPTBook;
+  font-family: var(--font-futura);
 }
 
 *::selection{
@@ -38,4 +38,8 @@ body {
 
 .font-grace {
   font-family: var(--font-grace);
+}
+
+.hero{
+  height: calc(100vh - 40px);
 }

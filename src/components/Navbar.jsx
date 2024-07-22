@@ -16,7 +16,11 @@ export default function Navbar() {
       <div className="mobile_nav w-full sm:hidden">
         <div className="w-full flex flex-row justify-between items-center py-2 px-3">
           <div className="Logo">
-            <h1 className="font-grace text-xl">GRACE</h1>
+            <Link href="/">
+              <h1 className="font-grace text-xl hover:underline hover:text-primary transition-all">
+                GRACE
+              </h1>
+            </Link>
           </div>
           <div className="bugger_menu font-bold">
             <button onClick={handleClick}>
@@ -26,32 +30,95 @@ export default function Navbar() {
         </div>
         {open ? (
           <div className="menu_list absolute top-9 text-center w-full flex flex-col gap-2 px-5 py-2">
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/services">Services</Link>
-            <Link href="/portfolio">Portfio</Link>
-            <Link href="/blog">Blog</Link>
-            <Link href="/contact">Contact</Link>
+            <Link
+              className="hover:underline hover:text-primary transition-all"
+              href="/"
+            >
+              Home
+            </Link>
+            <Link
+              className="hover:underline hover:text-primary transition-all"
+              href="/about"
+            >
+              About
+            </Link>
+            <Link
+              className="hover:underline hover:text-primary transition-all"
+              href="/services"
+            >
+              Services
+            </Link>
+            <Link
+              className="hover:underline hover:text-primary transition-all"
+              href="/portfolio"
+            >
+              Portfio
+            </Link>
+            <Link
+              className="hover:underline hover:text-primary transition-all"
+              href="/blogs"
+            >
+              Blog
+            </Link>
+            <Link
+              className="text-primary hover:underline hover:text-accent transition-all"
+              href="/contact"
+            >
+              Contact
+            </Link>
           </div>
         ) : null}
       </div>
 
       <div className="desk_nav py-5 hidden sm:flex w-full justify-evenly items-center">
         <div className="Logo font-grace text-xl">
-          <h1>GRACE</h1>
+          <Link
+            className="hover:underline hover:text-primary transition-all"
+            href="/"
+          >
+            <h1>GRACE</h1>
+          </Link>
         </div>
 
         <div className="menu_list flex flex-row justify-center items-center gap-2">
-          <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/services">Services</Link>
-          <Link href="/portfolio">Portfio</Link>
-          <Link href="/blog">Blog</Link>
+          <Link
+            className="hover:underline hover:text-primary transition-all"
+            href="/"
+          >
+            Home
+          </Link>
+          <Link
+            className="hover:underline hover:text-primary transition-all"
+            href="/about"
+          >
+            About
+          </Link>
+          <Link
+            className="hover:underline hover:text-primary transition-all"
+            href="/services"
+          >
+            Services
+          </Link>
+          <Link
+            className="hover:underline hover:text-primary transition-all"
+            href="/portfolio"
+          >
+            Portfio
+          </Link>
+          <Link
+            className="hover:underline hover:text-primary transition-all"
+            href="/blogs"
+          >
+            Blog
+          </Link>
         </div>
 
         <div className="cta">
-          <Link href="/contact">
-            <button>Contact</button>
+          <Link
+            className="bg-primary rounded-md text-background hover:underline hover:text-accent transition-all"
+            href="/contact"
+          >
+            <button className="px-4 py-2">Contact</button>
           </Link>
         </div>
       </div>

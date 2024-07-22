@@ -19,20 +19,28 @@ export async function generateStaticParams() {
 }
 
 // Fetch the blog data for the specific slug
-export async function GET(req, res) {
+export async function GET(req) {
   await connectToDatabase();
 
+  // Extract slug from URL path
+  const { pathname } = new URL(req.url, `http://${req.headers.host}`);
+  const slug = pathname.split("/").pop().trim(); // Extract slug and trim any extra whitespace
+
   if (req.method !== "GET") {
-    return res.status(405).json({ message: "Method Not Allowed" });
+    return new Response(JSON.stringify({ message: "Method Not Allowed" }), {
+      status: 405,
+    });
   }
 
-  const slug = req.query; // Get the slug from the query parameters
-  console.log(slug);
-  const blogPost = await blog.findOne({ slug }).lean();
+  const blogPost = await blog.findById(slug);
 
   if (!blogPost) {
-    return Response.json({ message: "Blog not found" });
+    return new Response(JSON.stringify({ message: "Kings Blog not found" }), {
+      status: 404,
+    });
   }
 
-  return Response.json(blogPost);
+  return new Response(JSON.stringify(blogPost), {
+    headers: { "Content-Type": "application/json" },
+  });
 }

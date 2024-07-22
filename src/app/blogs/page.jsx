@@ -29,16 +29,16 @@ const Blog = () => {
     fetchBlogs();
   }, []);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <p className="text-center font-grace">Blogs loading...</p>;
   if (error) return <p>Error: {error}</p>;
-  if (!blogs) return <p>No blogs found 🔥🔥🔥</p>;
+  if (!blogs) return <p>No blog found 🔥🔥🔥</p>;
 
   return (
     <div className="flex flex-col justify-center items-center text-center">
       <h1 className="font-grace">Blogs list</h1>
       <ul>
         {blogs.map((blog) => (
-          <div key={blog._id} className="">
+          <div key={blog._id} className="hover:underline hover:text-primary transition-all py-2">
             <Link href={`/blogs/${blog._id}`} key={blog._id}>
               <li>{blog.title}</li>
             </Link>
