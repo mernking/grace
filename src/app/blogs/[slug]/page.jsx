@@ -1,6 +1,25 @@
 "use client";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import connectToDatabase from "../../../../lib/mongoose";
+import blog from "../../../../models/blog";
+
+// Fetch all blog slugs
+async function fetchBlogSlugs() {
+  await connectToDatabase();
+  const blogs = await blog.find({}, "slug").exec();
+  return blogs.map((blog) => ({ slug: blog.slug }));
+}
+
+// Implement the generateStaticParams function
+export async function generateStaticParams() {
+  const slugs = await fetchBlogSlugs();
+  return slugs.map((slugObj) => ({
+    params: {
+      slug: slugObj.slug,
+    },
+  }));
+}
 
 const fetchBlog = async (slug) => {
   try {
