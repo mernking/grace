@@ -1,5 +1,3 @@
-// pages/blogs/[slug].js
-
 import connectToDatabase from "../../../lib/mongoose";
 import Blog from "../../../models/blog";
 
@@ -14,33 +12,26 @@ async function fetchBlogSlugs() {
 export async function generateStaticParams() {
   const slugs = await fetchBlogSlugs();
   return slugs.map((slugObj) => ({
-    slug: slugObj.slug,
+    params: {
+      slug: slugObj.slug,
+    },
   }));
 }
 
-// Page Component
-const BlogPage = ({ blog }) => {
-  // Render your blog page content here
-  return <div>{blog.title}</div>;
-};
-
 // Fetch the blog data for the specific slug
-export async function getStaticProps({ params }) {
+export default async function handler(req, res) {
   await connectToDatabase();
-  const slug = params.slug;
+
+  if (req.method !== 'GET') {
+    return res.status(405).json({ message: 'Method Not Allowed' });
+  }
+
+  const { slug } = req.query;
   const blog = await Blog.findOne({ slug }).lean();
 
   if (!blog) {
-    return {
-      notFound: true,
-    };
+    return res.status(404).json({ message: 'Blog not found' });
   }
 
-  return {
-    props: {
-      blog: JSON.parse(JSON.stringify(blog)), // serialize the blog data
-    },
-  };
+  return res.status(200).json(blog);
 }
-
-export default BlogPage;
