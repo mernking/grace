@@ -20,7 +20,7 @@ export async function generateStaticParams() {
 // Fetch the blog data for the specific slug
 async function fetchBlog(slug) {
   await connectToDatabase();
-  const blogPost = await blog.findOne({ slug }).lean();
+  const blogPost = await blog.findById(slug);
 
   if (!blogPost) {
     throw new Error("Blog not found");
@@ -33,8 +33,3 @@ export default async function BlogPage({ params }) {
   const blog = await fetchBlog(params.slug);
   return <BlogPost blog={blog} />;
 }
-
-// Fetch the blog data for the specific slug
-// export async function fetchBlog(slug) {
-//   await connectToDatabase();
-//   const blogPost = await blog.findOne({ slug }).lean();

@@ -6,7 +6,6 @@ const fetchBlog = async (slug) => {
   try {
     const response = await axios.get(`/api/blogs/${slug}`);
     if (response.status === 200) {
-      console.log(response.data);
       return response.data;
     } else {
       throw new Error("Blog not found");
@@ -21,12 +20,12 @@ const BlogPost = ({ blog }) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (!clientBlog) {
+    if (!clientBlog && blog?.slug) {
       fetchBlog(blog.slug)
         .then(setClientBlog)
         .catch((err) => setError(err.message));
     }
-  }, [blog.slug]);
+  }, [blog?.slug]);
 
   if (error) return <p className="text-center text-red-500">Error: {error}</p>;
   if (!clientBlog)
