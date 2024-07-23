@@ -25,12 +25,11 @@ const BlogPost = ({ blog }) => {
         .then(setClientBlog)
         .catch((err) => setError(err.message));
     }
-  }, [slug]);
+  }, [blog?.slug]);
 
   if (error) return <p className="text-center text-red-500">Error: {error}</p>;
   if (!clientBlog)
     return <p className="text-center text-gray-500">Getting blog</p>;
-
 
   //just to update the commit
 
