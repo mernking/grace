@@ -13,7 +13,9 @@ async function fetchBlogSlugs() {
 export async function generateStaticParams() {
   const slugs = await fetchBlogSlugs();
   return slugs.map((slugObj) => ({
-    slug: slugObj.slug,
+    params: {
+      slug: slugObj.slug,
+    },
   }));
 }
 
