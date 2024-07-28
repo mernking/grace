@@ -1,7 +1,8 @@
+// [slug]/route.js
+
 import connectToDatabase from "../../../../../lib/mongoose";
 import Blog from "../../../../../models/blog";
-
-//new slug kings stuff
+import { generateStaticParams } from "./generateStaticParams"
 
 export async function GET(req, { params }) {
   const { slug } = params;
@@ -11,9 +12,12 @@ export async function GET(req, { params }) {
     const blogPost = await Blog.findById(slug);
 
     if (!blogPost) {
-      return new Response(JSON.stringify({ message: `Blog post ${slug} not found` }), {
-        status: 404,
-      });
+      return new Response(
+        JSON.stringify({ message: `Blog post ${slug} not found` }),
+        {
+          status: 404,
+        }
+      );
     }
 
     return new Response(JSON.stringify(blogPost), {
@@ -26,3 +30,5 @@ export async function GET(req, { params }) {
     });
   }
 }
+
+export { generateStaticParams };

@@ -30,14 +30,14 @@ export default async function Page({ params }) {
     const response = await axios.get(`${API_BASE_URL}/api/blogs/${slug}`);
     if (response.status === 200) {
       const blog = response.data;
-      console.log(blog);
 
       return (
-        <div>
-          <h2 className="text-center text-2xl">{blog.title}</h2>
+        <div className="flex flex-col justify-center items-center">
+          <h2 className="text-center text-2xl px-1">{blog.title}</h2>
           {/* Conditionally render the blog image if `blog.image` is available */}
           {blog.image && (
             <Image
+              className="rounded-lg px-1"
               src={blog.image} // Use the full URL directly
               alt={blog.title}
               width={800} // Adjust based on the actual image size or desired display size
@@ -47,11 +47,12 @@ export default async function Page({ params }) {
           )}
           <div>
             {blog.sections.map((section) => (
-              <div key={section._id}>
-                <h3 className="text-center text-2xl">{section.heading}</h3>
+              <div key={section._id} className="flex flex-col justify-center items-center">
+                <h3 className="text-center text-2xl px-1">{section.heading}</h3>
                 {/* Conditionally render the section image if `section.image` is available */}
                 {section.image && (
                   <Image
+                    className="rounded-lg px-1"
                     src={section.image} // Use the full URL directly
                     alt={section.heading} // Updated alt text for better accessibility
                     width={800} // Adjust based on the actual image size or desired display size
@@ -59,25 +60,27 @@ export default async function Page({ params }) {
                     layout="responsive" // Optional: adjusts the image size responsively
                   />
                 )}
+                <p className="px-1 max-w-[850px]">{section.content}</p>
                 {/* If there are subsections, you can map through them here as well */}
                 {section.subsections && section.subsections.length > 0 && (
                   <div>
                     {section.subsections.map((subsection) => (
-                      <div key={subsection._id}>
-                        <h4 className="text-center text-xl">
-                          {subsection.heading}
+                      <div key={subsection._id} className="flex flex-col justify-center items-center">
+                        <h4 className="text-center text-xl px-1">
+                          {subsection.subheading}
                         </h4>
                         {/* Conditionally render the subsection image if `subsection.image` is available */}
                         {subsection.image && (
                           <Image
+                            className="rounded-lg px-1"
                             src={subsection.image} // Use the full URL directly
-                            alt={subsection.heading} // Updated alt text for better accessibility
+                            alt={subsection.subheading} // Updated alt text for better accessibility
                             width={800} // Adjust based on the actual image size or desired display size
                             height={600} // Adjust based on the actual image size or desired display size
                             layout="responsive" // Optional: adjusts the image size responsively
                           />
                         )}
-                        <p>{subsection.content}</p>
+                        <p className="px-1 max-w-[850px]">{subsection.content}</p>
                       </div>
                     ))}
                   </div>

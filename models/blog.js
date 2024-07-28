@@ -15,10 +15,12 @@ const BlogSchema = new mongoose.Schema({
     {
       heading: String,
       content: String,
+      image: String,
       subsections: [
         {
           subheading: String,
           content: String,
+          image: String,
         },
       ],
     },

@@ -3,6 +3,7 @@ const nextConfig = {
   images: {
     domains: [
       "pexels.com",
+      "images.pexels.com",
       "anotherdomain.com",
       "cdn.example.com",
     ], // Add as many domains as needed
