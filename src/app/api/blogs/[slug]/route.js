@@ -1,46 +1,28 @@
 import connectToDatabase from "../../../../../lib/mongoose";
-import blog from "../../../../../models/blog";
+import Blog from "../../../../../models/blog";
 
-// Fetch all blog slugs
-async function fetchBlogSlugs() {
-  await connectToDatabase();
-  const blogs = await blog.find({}, "slug").exec();
-  return blogs.map((blog) => ({ slug: blog.slug }));
-}
+//new slug kings stuff
 
-// Implement the generateStaticParams function
-export async function generateStaticParams() {
-  const slugs = await fetchBlogSlugs();
-  return slugs.map((slugObj) => ({
-    params: {
-      slug: slugObj.slug,
-    },
-  }));
-}
+export async function GET(req, { params }) {
+  const { slug } = params;
 
-// Fetch the blog data for the specific slug
-export async function GET(req) {
-  await connectToDatabase();
+  try {
+    await connectToDatabase();
+    const blogPost = await Blog.findById(slug);
 
-  // Extract slug from URL path
-  const { pathname } = new URL(req.url, `http://${req.headers.host}`);
-  const slug = pathname.split("/").pop().trim(); // Extract slug and trim any extra whitespace
+    if (!blogPost) {
+      return new Response(JSON.stringify({ message: `Blog post ${slug} not found` }), {
+        status: 404,
+      });
+    }
 
-  if (req.method !== "GET") {
-    return new Response(JSON.stringify({ message: "Method Not Allowed" }), {
-      status: 405,
+    return new Response(JSON.stringify(blogPost), {
+      status: 200,
+    });
+  } catch (error) {
+    console.error(error);
+    return new Response(JSON.stringify({ message: "Internal Server Error" }), {
+      status: 500,
     });
   }
-
-  const blogPost = await blog.findById(slug);
-
-  if (!blogPost) {
-    return new Response(JSON.stringify({ message: "Kings Blog not found" }), {
-      status: 404,
-    });
-  }
-
-  return new Response(JSON.stringify(blogPost), {
-    headers: { "Content-Type": "application/json" },
-  });
 }
