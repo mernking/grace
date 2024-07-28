@@ -75,7 +75,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         env:
-          API_BASE_URL: 'https://mernking.github.io/grace' # Replace with your actual API base URL
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}  # Ensure this is set in your repository secrets
+          API_BASE_URL: 'https://mernking.github.io/grace'  # Replace with your actual API base URL
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
