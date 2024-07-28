@@ -1,37 +1,40 @@
-import connectToDatabase from "../../../../lib/mongoose";
-import blog from "../../../../models/blog";
-import BlogPost from "@/components/pages/Blogpost";
+// app/blogs/[slug]/page.jsx
+import axios from "axios";
 
-// Fetch all blog slugs
-async function fetchBlogSlugs() {
-  await connectToDatabase();
-  const blogs = await blog.find({}, "slug").exec();
-  return blogs.map((blog) => ({ slug: blog.slug }));
-}
-
-// Implement the generateStaticParams function
 export async function generateStaticParams() {
-  const slugs = await fetchBlogSlugs();
-  return slugs.map((slugObj) => ({
-    params: {
-      slug: slugObj.slug,
-    },
-  }));
-}
-
-// Fetch the blog data for the specific slug
-async function fetchBlog(slug) {
-  await connectToDatabase();
-  const blogPost = await blog.findById(slug);
-
-  if (!blogPost) {
-    throw new Error("Blog not found");
+  try {
+    const response = await axios.get("/api/blogs");
+    if (response.status === 200) {
+      const blogs = response.data.blogs; // Adjust based on your API response
+      return blogs.map((blog) => ({
+        slug: blog.slug,
+      }));
+    } else {
+      throw new Error("Failed to fetch blogs");
+    }
+  } catch (err) {
+    console.error(err.message || "An error occurred");
+    return [];
   }
-
-  return blogPost;
 }
 
-export default async function BlogPage({ params }) {
-  const blog = await fetchBlog(params.slug);
-  return <BlogPost blog={blog} />;
+export default async function Page({ params }) {
+  const { slug } = params;
+
+  try {
+    const response = await axios.get(`/api/blogs/${slug}`);
+    if (response.status === 200) {
+      const blog = response.data.blog;
+      return (
+        <div>
+          <h1>{blog.title}</h1>
+          <p>{blog.content}</p>
+        </div>
+      );
+    } else {
+      throw new Error("Blog not found");
+    }
+  } catch (err) {
+    return <div>An error occurred: {err.message || "An error occurred"}</div>;
+  }
 }

@@ -25,7 +25,7 @@ const BlogPost = ({ blog }) => {
         .then(setClientBlog)
         .catch((err) => setError(err.message));
     }
-  }, [blog?.slug]);
+  }, []);
 
   if (error) return <p className="text-center text-red-500">Error: {error}</p>;
   if (!clientBlog)

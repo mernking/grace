@@ -1,46 +1,63 @@
 import connectToDatabase from "../../../../../lib/mongoose";
 import blog from "../../../../../models/blog";
 
-// Fetch all blog slugs
-async function fetchBlogSlugs() {
+// Fetch all blog IDs
+async function fetchBlogIds() {
   await connectToDatabase();
-  const blogs = await blog.find({}, "slug").exec();
-  return blogs.map((blog) => ({ slug: blog.slug }));
+  const blogs = await blog.find({}, "_id").exec();
+  console.log("kings blog:", blogs); // Debugging line to see fetched blogs
+  return blogs.map((blog) => ({ id: blog._id.toString() })); // Convert ObjectId to string
 }
 
 // Implement the generateStaticParams function
 export async function generateStaticParams() {
-  const slugs = await fetchBlogSlugs();
-  return slugs.map((slugObj) => ({
+  const ids = await fetchBlogIds();
+  console.log("Generated IDs:", ids); // Debugging line to see generated IDs
+  return ids.map((idObj) => ({
     params: {
-      slug: slugObj.slug,
+      id: idObj.id,
     },
   }));
 }
 
-// Fetch the blog data for the specific slug
+// Fetch the blog data for the specific ID
 export async function GET(req) {
-  await connectToDatabase();
+  try {
+    await connectToDatabase();
 
-  // Extract slug from URL path
-  const { pathname } = new URL(req.url, `http://${req.headers.host}`);
-  const slug = pathname.split("/").pop().trim(); // Extract slug and trim any extra whitespace
+    // Extract ID from URL path
+    const { pathname } = new URL(req.url, `http://${req.headers.host}`);
+    const id = pathname.split("/").pop().trim(); // Extract ID and trim any extra whitespace
 
-  if (req.method !== "GET") {
-    return new Response(JSON.stringify({ message: "Method Not Allowed" }), {
-      status: 405,
+    console.log("kings id api test", id);
+
+    if (req.method !== "GET") {
+      return new Response(JSON.stringify({ message: "Method Not Allowed" }), {
+        status: 405,
+      });
+    }
+
+    // Use the ID to find the blog post
+    const blogPost = await blog.findById(id).lean();
+    console.log("kings awaited blog api test", blogPost);
+    if (!blogPost) {
+      return new Response(JSON.stringify({ message: "Blog not found" }), {
+        status: 404,
+      });
+    }
+
+    return new Response(JSON.stringify(blogPost), {
+      headers: { "Content-Type": "application/json" },
     });
+  } catch (error) {
+    return new Response(
+      JSON.stringify({
+        message: "Internal Server Error",
+        error: error.message,
+      }),
+      {
+        status: 500,
+      }
+    );
   }
-
-  const blogPost = await blog.findById(slug);
-
-  if (!blogPost) {
-    return new Response(JSON.stringify({ message: "Kings Blog not found" }), {
-      status: 404,
-    });
-  }
-
-  return new Response(JSON.stringify(blogPost), {
-    headers: { "Content-Type": "application/json" },
-  });
 }
