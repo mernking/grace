@@ -70,8 +70,16 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
 
-      - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+- name: Install dependencies
+  run: |
+    echo "${{ env.API_BASE_URL }}"
+    echo "${{ env.MONGODB_URI }}"
+    echo "${{ secrets.API_BASE_URL }}"
+    echo "${{ secrets.MONGODB_URI }}"
+
+- name: Run package manager command
+  run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+
 
       - name: Build with Next.js
         env:
