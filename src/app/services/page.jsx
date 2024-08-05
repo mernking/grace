@@ -90,9 +90,9 @@ export default function page() {
           </div>
           <h3>WEBSITE SPEED OPTIMIZATION</h3>
           <p>
-            Enhance your site\'s performance with faster load times. We optimize
-            images, streamline code, and implement caching to improve user
-            experience and SEO.
+            Enhance your site&apos;s performance with faster load times. We
+            optimize images, streamline code, and implement caching to improve
+            user experience and SEO.
           </p>
         </div>
         <div className="service flex flex-col justify-center items-center w-[300px]">
