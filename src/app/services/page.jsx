@@ -7,13 +7,12 @@ import { HiOutlineStatusOnline } from "react-icons/hi";
 import { MdOutlineLocationSearching } from "react-icons/md";
 import { SlSpeedometer } from "react-icons/sl";
 import { LuMailCheck } from "react-icons/lu";
-import {PiPaletteLight} from "react-icons/pi";
+import { PiPaletteLight } from "react-icons/pi";
 import { VscTools } from "react-icons/vsc";
 import { MdOutlineComputer } from "react-icons/md";
 import { TbCloudComputing } from "react-icons/tb";
 
-
-export default function page () {
+export default function page() {
   return (
     <div>
       <div className="title text-center font-grace">
@@ -78,7 +77,7 @@ export default function page () {
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <MdOutlineLocationSearching />
           </div>
-       
+
           <h3>SEM (Search Engine Marketing)</h3>
           <p>
             We execute targeted digital marketing campaigns to drive qualified
