@@ -78,6 +78,7 @@ export default function page () {
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <MdOutlineLocationSearching />
           </div>
+       
           <h3>SEM (Search Engine Marketing)</h3>
           <p>
             We execute targeted digital marketing campaigns to drive qualified
@@ -90,7 +91,7 @@ export default function page () {
           </div>
           <h3>WEBSITE SPEED OPTIMIZATION</h3>
           <p>
-            Enhance your site's performance with faster load times. We optimize
+            Enhance your site\'s performance with faster load times. We optimize
             images, streamline code, and implement caching to improve user
             experience and SEO.
           </p>
