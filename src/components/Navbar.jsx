@@ -12,7 +12,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full bg-background">
       <div className="mobile_nav w-full sm:hidden">
         <div className="w-full flex flex-row justify-between items-center py-2 px-3">
           <div className="Logo">
