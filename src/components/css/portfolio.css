@@ -1,0 +1,16 @@
+ .portcard{
+    border: 2px solid var(--text);
+  }
+@media screen and (max-width: 550px) {
+  .portcard{
+    width: 200px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .portcard {
+    width: 100%; /* Reduce width as viewport width decreases */
+    height: calc(100vw + 24px); /* Reduce height as viewport width decreases */
+  }
+}

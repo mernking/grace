@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`dark bg-background font-futura flex flex-col justify-center items-center text-text ${futuraPTBook.variable} ${graceFont.variable}`}
+      className={`dark bg-background text-[20px] font-futura flex flex-col justify-center items-center text-text ${futuraPTBook.variable} ${graceFont.variable}`}
     >
       <body className="max-w-[1080px] overflow-x-hidden">
         <div className="w-full flex flex-col justify-center items-center">
