@@ -12,7 +12,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="w-full bg-background">
+    <div className="w-full">
       <div className="mobile_nav w-full sm:hidden">
         <div className="w-full flex flex-row justify-between items-center py-2 px-3">
           <div className="Logo">
@@ -29,7 +29,7 @@ export default function Navbar() {
           </div>
         </div>
         {open ? (
-          <div className="menu_list absolute top-9 text-center w-full flex flex-col gap-2 px-5 py-2">
+          <div className="menu_list bg-background absolute top-9 text-center w-full flex flex-col gap-2 px-5 py-2">
             <Link
               className="hover:underline hover:text-primary transition-all"
               href="/"
