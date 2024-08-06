@@ -4,7 +4,7 @@ export default function Portfoliopg() {
   return (
     <div className="w-full gap-2 flex flex-wrap justify-center">
       <div className="portcard overflow-hidden w-[250px] h-[350px] rounded-lg flex flex-col justify-center items-center">
-        <div className="cardimage w-full h-[175px] relative">
+        <div className="w-full h-[175px] relative">
           <Image
             className="object-cover"
             src="/portfolio/test.jpg"
@@ -17,7 +17,7 @@ export default function Portfoliopg() {
         </div>
       </div>
       <div className="portcard overflow-hidden w-[250px] h-[350px] rounded-lg flex flex-col justify-center items-center">
-        <div className="cardimage w-full h-[175px] relative">
+        <div className="w-full h-[175px] relative">
           <Image
             className="object-cover"
             src="/portfolio/test.jpg"
@@ -30,7 +30,7 @@ export default function Portfoliopg() {
         </div>
       </div>
       <div className="portcard overflow-hidden w-[250px] h-[350px] rounded-lg flex flex-col justify-center items-center">
-        <div className="cardimage w-full h-[175px] relative">
+        <div className="w-full h-[175px] relative">
           <Image
             className="object-cover"
             src="/portfolio/test.jpg"
@@ -43,7 +43,7 @@ export default function Portfoliopg() {
         </div>
       </div>
       <div className="portcard overflow-hidden w-[250px] h-[350px] rounded-lg flex flex-col justify-center items-center">
-        <div className="cardimage w-full h-[175px] relative">
+        <div className="w-full h-[175px] relative">
           <Image
             className="object-cover"
             src="/portfolio/test.jpg"
@@ -56,7 +56,7 @@ export default function Portfoliopg() {
         </div>
       </div>
       <div className="portcard overflow-hidden w-[250px] h-[350px] rounded-lg flex flex-col justify-center items-center">
-        <div className="cardimage w-full h-[175px] relative">
+        <div className="w-full h-[175px] relative">
           <Image
             className="object-cover"
             src="/portfolio/test.jpg"
@@ -69,7 +69,7 @@ export default function Portfoliopg() {
         </div>
       </div>
       <div className="portcard overflow-hidden w-[250px] h-[350px] rounded-lg flex flex-col justify-center items-center">
-        <div className="cardimage w-full h-[175px] relative">
+        <div className="w-full h-[175px] relative">
           <Image
             className="object-cover"
             src="/portfolio/test.jpg"
@@ -82,7 +82,7 @@ export default function Portfoliopg() {
         </div>
       </div>
       <div className="portcard overflow-hidden w-[250px] h-[350px] rounded-lg flex flex-col justify-center items-center">
-        <div className="cardimage w-full h-[175px] relative">
+        <div className="w-full h-[175px] relative">
           <Image
             className="object-cover"
             src="/portfolio/test.jpg"
@@ -95,7 +95,7 @@ export default function Portfoliopg() {
         </div>
       </div>
       <div className="portcard overflow-hidden w-[250px] h-[350px] rounded-lg flex flex-col justify-center items-center">
-        <div className="cardimage w-full h-[175px] relative">
+        <div className="w-full h-[175px] relative">
           <Image
             className="object-cover"
             src="/portfolio/test.jpg"
@@ -108,7 +108,7 @@ export default function Portfoliopg() {
         </div>
       </div>
       <div className="portcard overflow-hidden w-[250px] h-[350px] rounded-lg flex flex-col justify-center items-center">
-        <div className="cardimage w-full h-[175px] relative">
+        <div className="w-full h-[175px] relative">
           <Image
             className="object-cover"
             src="/portfolio/test.jpg"
@@ -121,7 +121,7 @@ export default function Portfoliopg() {
         </div>
       </div>
       <div className="portcard overflow-hidden w-[250px] h-[350px] rounded-lg flex flex-col justify-center items-center">
-        <div className="cardimage w-full h-[175px] relative">
+        <div className="w-full h-[175px] relative">
           <Image
             className="object-cover"
             src="/portfolio/test.jpg"
