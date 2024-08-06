@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
+import Image from "next/image";
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
@@ -25,11 +26,12 @@ const Blog = () => {
         setLoading(false);
       }
     };
-    
+
     fetchBlogs();
   }, [blogs]);
 
-  if (loading) return <p className="text-center font-grace">Blogs loading...</p>;
+  if (loading)
+    return <p className="text-center font-grace">Blogs loading...</p>;
   if (error) return <p>Error: {error}</p>;
   if (!blogs) return <p>No blog found 🔥🔥🔥</p>;
 
@@ -38,8 +40,21 @@ const Blog = () => {
       <h1 className="font-grace">Blogs list</h1>
       <ul>
         {blogs.map((blog) => (
-          <div key={blog._id} className="hover:underline hover:text-primary transition-all py-2">
-            <Link href={`/blogs/${blog._id}`} key={blog._id}>
+          <div
+            key={blog._id}
+            className="hover:underline flex flex-col gap-2 hover:text-primary transition-all py-2"
+          >
+            <Link
+              className="flex flex-col gap-2"
+              href={`/blogs/${blog._id}`}
+              key={blog._id}
+            >
+              <Image
+                src={blog.image}
+                alt={blog.title}
+                width={300}
+                height={200}
+              />
               <li>{blog.title}</li>
             </Link>
           </div>
