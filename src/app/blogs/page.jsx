@@ -40,7 +40,7 @@ const Blog = () => {
   return (
     <div className="flex flex-col justify-center items-center text-center">
       <h1 className="font-grace">Blogs list</h1>
-      <ul>
+      <ul className="w-full flex flex-wrap gap-2 justify-center">
         {blogs.map((blog) => (
           <div
             key={blog._id}
