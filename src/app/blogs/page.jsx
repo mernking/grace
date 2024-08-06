@@ -45,11 +45,12 @@ const Blog = () => {
             className="hover:underline flex flex-col gap-2 hover:text-primary transition-all py-2"
           >
             <Link
-              className="flex flex-col gap-2"
+              className="flex flex-col gap-2 justify-center items-center"
               href={`/blogs/${blog._id}`}
               key={blog._id}
             >
               <Image
+                className="rounded-lg"
                 src={blog.image}
                 alt={blog.title}
                 width={300}
