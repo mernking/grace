@@ -42,7 +42,7 @@ const Blog = () => {
         {blogs.map((blog) => (
           <div
             key={blog._id}
-            className="hover:underline mt-3 flex flex-col gap-2 hover:text-primary transition-all py-2"
+            className="hover:underline mt-5 flex flex-col gap-2 hover:text-primary transition-all py-2"
           >
             <Link
               className="flex flex-col gap-2 justify-center items-center"
