@@ -11,6 +11,10 @@ export default function Navbar() {
     setOpen(!open);
   };
 
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <div className="w-full z-[1000]">
       <div className="mobile_nav w-full sm:hidden">
@@ -29,7 +33,7 @@ export default function Navbar() {
           </div>
         </div>
         {open ? (
-          <div className="menu_list bg-background absolute top-9 text-center w-full flex flex-col gap-2 px-5 py-2">
+          <div onClick={handleClose} className="menu_list bg-background absolute top-9 text-center w-full flex flex-col gap-2 px-5 py-2">
             <Link
               className="hover:underline hover:text-primary transition-all"
               href="/"

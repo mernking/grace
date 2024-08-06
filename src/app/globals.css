@@ -28,9 +28,9 @@
   src: url("/fonts/FuturaPTBook.otf");
 }
 
-/* body {
+body {
   font-family: var(--font-futura);
-} */
+}
 
 *::selection{
   background-color: var(--secondary);
