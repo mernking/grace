@@ -35,6 +35,8 @@ const Blog = () => {
   if (error) return <p>Error: {error}</p>;
   if (!blogs) return <p>No blog found 🔥🔥🔥</p>;
 
+  //hello world
+
   return (
     <div className="flex flex-col justify-center items-center text-center">
       <h1 className="font-grace">Blogs list</h1>
