@@ -33,7 +33,6 @@ export default async function Page({ params }) {
 
       return (
         <div className="flex flex-col justify-center items-center">
-          <h2 className="text-center text-2xl px-1">{blog.title}</h2>
           {/* Conditionally render the blog image if `blog.image` is available */}
           {blog.image && (
             <Image
@@ -45,10 +44,13 @@ export default async function Page({ params }) {
               layout="responsive" // Optional: adjusts the image size responsively
             />
           )}
+          <h2 className="text-center text-3xl px-1 pb-3">{blog.title}</h2>
           <div>
             {blog.sections.map((section) => (
-              <div key={section._id} className="flex flex-col justify-center items-center">
-                <h3 className="text-center text-2xl px-1">{section.heading}</h3>
+              <div
+                key={section._id}
+                className="flex flex-col justify-center items-center"
+              >
                 {/* Conditionally render the section image if `section.image` is available */}
                 {section.image && (
                   <Image
@@ -60,15 +62,16 @@ export default async function Page({ params }) {
                     layout="responsive" // Optional: adjusts the image size responsively
                   />
                 )}
+                <h3 className="text-center text-2xl px-1">{section.heading}</h3>
                 <p className="px-1 max-w-[850px]">{section.content}</p>
                 {/* If there are subsections, you can map through them here as well */}
                 {section.subsections && section.subsections.length > 0 && (
                   <div>
                     {section.subsections.map((subsection) => (
-                      <div key={subsection._id} className="flex flex-col justify-center items-center">
-                        <h4 className="text-center text-xl px-1">
-                          {subsection.subheading}
-                        </h4>
+                      <div
+                        key={subsection._id}
+                        className="flex flex-col justify-center items-center"
+                      >
                         {/* Conditionally render the subsection image if `subsection.image` is available */}
                         {subsection.image && (
                           <Image
@@ -80,7 +83,12 @@ export default async function Page({ params }) {
                             layout="responsive" // Optional: adjusts the image size responsively
                           />
                         )}
-                        <p className="px-1 max-w-[850px]">{subsection.content}</p>
+                        <h4 className="text-center text-xl px-1">
+                          {subsection.subheading}
+                        </h4>
+                        <p className="px-1 max-w-[850px]">
+                          {subsection.content}
+                        </p>
                       </div>
                     ))}
                   </div>

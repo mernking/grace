@@ -17,7 +17,7 @@ export default function Service() {
       </div>
 
       <div className="services grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
-        <div className="service flex flex-col justify-center items-center w-[300px]">
+        <div className="service flex shadow-[0px_11px_4px_0px_#1ee1eb] rounded-md px-1 flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <BsVectorPen />
           </div>
@@ -27,7 +27,7 @@ export default function Service() {
             aesthetic appeal and user experience to enhance ROI.
           </p>
         </div>
-        <div className="service flex flex-col justify-center items-center w-[300px]">
+        <div className="service flex shadow-[0px_11px_4px_0px_#1ee1eb] rounded-md px-1 flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <IoCodeSlashOutline />
           </div>
@@ -38,7 +38,7 @@ export default function Service() {
             growth.
           </p>
         </div>
-        <div className="service flex flex-col justify-center items-center w-[300px]">
+        <div className="service flex shadow-[0px_11px_4px_0px_#1ee1eb] rounded-md px-1 flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <GrOptimize />
           </div>
@@ -48,7 +48,7 @@ export default function Service() {
             ensuring optimal user engagement and satisfaction.
           </p>
         </div>
-        <div className="service flex flex-col justify-center items-center w-[300px]">
+        <div className="service flex shadow-[0px_11px_4px_0px_#1ee1eb] rounded-md px-1 flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <HiOutlineStatusOnline />
           </div>
@@ -60,7 +60,7 @@ export default function Service() {
           </p>
         </div>
 
-        <div className="service flex flex-col justify-center items-center w-[300px]">
+        <div className="service flex shadow-[0px_11px_4px_0px_#1ee1eb] rounded-md px-1 flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <FiBriefcase />
           </div>
@@ -71,7 +71,7 @@ export default function Service() {
             advantage.
           </p>
         </div>
-        <div className="service flex flex-col justify-center items-center w-[300px]">
+        <div className="service flex shadow-[0px_11px_4px_0px_#1ee1eb] rounded-md px-1 flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <MdOutlineLocationSearching />
           </div>
