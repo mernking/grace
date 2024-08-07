@@ -16,7 +16,7 @@ export default function Value() {
         <p>Our values are at the heart of everything we do.</p>
       </div>
       <div className="values grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
-        <div className="value flex shadow-[0px_11px_4px_0px_#1ee1eb] rounded-md px-1 flex-col justify-center items-center w-[300px]">
+        <div className="value flex shadow-[inset_0px_5px_4px_0px_#1ee1eb] rounded-md px-1 flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <MdOutlineShield />
           </div>
@@ -26,7 +26,7 @@ export default function Value() {
             Transparency and honesty are fundamental to everything we do.
           </p>
         </div>
-        <div className="value flex shadow-[0px_11px_4px_0px_#1ee1eb] rounded-md px-1 flex-col justify-center items-center w-[300px]">
+        <div className="value flex shadow-[inset_0px_5px_4px_0px_#1ee1eb] rounded-md px-1 flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <IoTrophyOutline />
           </div>
@@ -36,7 +36,7 @@ export default function Value() {
             deliver exceptional results and continuously improve.
           </p>
         </div>
-        <div className="value flex shadow-[0px_11px_4px_0px_#1ee1eb] rounded-md px-1 flex-col justify-center items-center w-[300px]">
+        <div className="value flex shadow-[inset_0px_5px_4px_0px_#1ee1eb] rounded-md px-1 flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <FaRegHandshake />
           </div>
@@ -46,7 +46,7 @@ export default function Value() {
             understanding their needs and exceeding their expectations.
           </p>
         </div>
-        <div className="value flex shadow-[0px_11px_4px_0px_#1ee1eb] rounded-md px-1 flex-col justify-center items-center w-[300px]">
+        <div className="value flex shadow-[inset_0px_5px_4px_0px_#1ee1eb] rounded-md px-1 flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <RiLightbulbFlashLine />
           </div>
@@ -56,7 +56,7 @@ export default function Value() {
             and solutions to drive positive change.
           </p>
         </div>
-        <div className="value flex shadow-[0px_11px_4px_0px_#1ee1eb] rounded-md px-1 flex-col justify-center items-center w-[300px]">
+        <div className="value flex shadow-[inset_0px_5px_4px_0px_#1ee1eb] rounded-md px-1 flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <BsPeople />
           </div>
@@ -66,7 +66,7 @@ export default function Value() {
             together, we achieve more and foster a supportive environment.
           </p>
         </div>
-        <div className="value flex shadow-[0px_11px_4px_0px_#1ee1eb] rounded-md px-1 flex-col justify-center items-center w-[300px]">
+        <div className="value flex shadow-[inset_0px_5px_4px_0px_#1ee1eb] rounded-md px-1 flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <BsPersonCheck />
           </div>

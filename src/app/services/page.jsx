@@ -20,7 +20,7 @@ export default function page() {
       </div>
 
       <div className="services grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
-        <div className="service flex flex-col justify-center items-center w-[300px]">
+        <div className="service shadow-[0px_5px_4px_0px_#1ee1eb] rounded-md px-1 flex flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <BsVectorPen />
           </div>
@@ -30,7 +30,7 @@ export default function page() {
             aesthetic appeal and user experience to enhance ROI.
           </p>
         </div>
-        <div className="service flex flex-col justify-center items-center w-[300px]">
+        <div className="service shadow-[0px_5px_4px_0px_#1ee1eb] rounded-md px-1 flex flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <IoCodeSlashOutline />
           </div>
@@ -41,7 +41,7 @@ export default function page() {
             growth.
           </p>
         </div>
-        <div className="service flex flex-col justify-center items-center w-[300px]">
+        <div className="service shadow-[0px_5px_4px_0px_#1ee1eb] rounded-md px-1 flex flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <GrOptimize />
           </div>
@@ -51,7 +51,7 @@ export default function page() {
             ensuring optimal user engagement and satisfaction.
           </p>
         </div>
-        <div className="service flex flex-col justify-center items-center w-[300px]">
+        <div className="service shadow-[0px_5px_4px_0px_#1ee1eb] rounded-md px-1 flex flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <HiOutlineStatusOnline />
           </div>
@@ -62,7 +62,7 @@ export default function page() {
             growth through targeted social media strategies.
           </p>
         </div>
-        <div className="service flex flex-col justify-center items-center w-[300px]">
+        <div className="service shadow-[0px_5px_4px_0px_#1ee1eb] rounded-md px-1 flex flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <FiBriefcase />
           </div>
@@ -73,7 +73,7 @@ export default function page() {
             advantage.
           </p>
         </div>
-        <div className="service flex flex-col justify-center items-center w-[300px]">
+        <div className="service shadow-[0px_5px_4px_0px_#1ee1eb] rounded-md px-1 flex flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <MdOutlineLocationSearching />
           </div>
@@ -84,7 +84,7 @@ export default function page() {
             traffic and maximize your ROI through paid search strategies.
           </p>
         </div>
-        <div className="service flex flex-col justify-center items-center w-[300px]">
+        <div className="service shadow-[0px_5px_4px_0px_#1ee1eb] rounded-md px-1 flex flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <SlSpeedometer />
           </div>
@@ -95,7 +95,7 @@ export default function page() {
             user experience and SEO.
           </p>
         </div>
-        <div className="service flex flex-col justify-center items-center w-[300px]">
+        <div className="service shadow-[0px_5px_4px_0px_#1ee1eb] rounded-md px-1 flex flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <LuMailCheck />
           </div>
@@ -105,7 +105,7 @@ export default function page() {
             conversions.
           </p>
         </div>
-        <div className="service flex flex-col justify-center items-center w-[300px]">
+        <div className="service shadow-[0px_5px_4px_0px_#1ee1eb] rounded-md px-1 flex flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <VscTools />
           </div>
@@ -115,7 +115,7 @@ export default function page() {
             tailored to your needs.
           </p>
         </div>
-        <div className="service flex flex-col justify-center items-center w-[300px]">
+        <div className="service shadow-[0px_5px_4px_0px_#1ee1eb] rounded-md px-1 flex flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <MdOutlineComputer />
           </div>
@@ -125,7 +125,7 @@ export default function page() {
             requirements.
           </p>
         </div>
-        <div className="service flex flex-col justify-center items-center w-[300px]">
+        <div className="service shadow-[0px_5px_4px_0px_#1ee1eb] rounded-md px-1 flex flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <TbCloudComputing />
           </div>
@@ -135,7 +135,7 @@ export default function page() {
             integrations.
           </p>
         </div>
-        <div className="service flex flex-col justify-center items-center w-[300px]">
+        <div className="service shadow-[0px_5px_4px_0px_#1ee1eb] rounded-md px-1 flex flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">
             <PiPaletteLight />
           </div>
