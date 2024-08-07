@@ -14,7 +14,7 @@ const graceFont = localFont({
 });
 
 export const metadata = {
-  title: "GRACE AGENCY",
+  title: "BOUNDLESS BOLT",
   description: "a digital agency driven by quality and not quantity",
 };
 
