@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://boundlessbolt.netlify.app
+
+# Sitemaps
+Sitemap: https://boundlessbolt.netlify.app/sitemap.xml
