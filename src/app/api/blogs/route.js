@@ -20,7 +20,7 @@ export async function POST(req, res) {
   const { title, image, author, date, sections } = await req.json();
 
   try {
-    if (!title || !author ) {
+    if (!title || !author) {
       return Response.json({ error: "Missing required fields" });
     }
     if (await Blog.findOne({ title: title })) {
@@ -37,6 +37,29 @@ export async function POST(req, res) {
     return Response.json({ message: "Blog created successfully" });
   } catch (error) {
     return Response.json({ error: "Failed to create blog", message: error });
+  }
+}
+
+export async function PUT(req, res) {
+  await connectToDatabase();
+  const { id, title, image, author, date, sections } = await req.json();
+  try {
+    if (!id) {
+      return Response.json({ error: "Missing required fields" });
+    }
+    if (!(await Blog.findById(id))) {
+      return Response.json({ error: "Blog not found" });
+    }
+    await Blog.findByIdAndUpdate(id, {
+      title,
+      image,
+      author,
+      date,
+      sections,
+    });
+    return Response.json({ message: "Blog updated successfully" });
+  } catch (error) {
+    return Response.json({ error: "Failed to update blog", message: error });
   }
 }
 
