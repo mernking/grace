@@ -1,11 +1,11 @@
-import Link from 'next/link';
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
 export default function page() {
   return (
     <div>
       <div class="flex items-center justify-center h-screen">
-        <div class="p-4 rounded shadow-lg ring ring-indigo-600/50">
+        <div class="p-4 rounded shadow-lg ring ring-accent">
           <div class="flex flex-col items-center space-y-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -23,10 +23,13 @@ export default function page() {
             </svg>
             <h1 class="text-4xl font-bold">Thank You !</h1>
             <p>
-              Thank you for your interest! Check your email for a link to the
-              guide.
+              thanks for your message. we will get back to you as soon as
+              posibble
             </p>
-            <Link href="/" class="inline-flex items-center px-4 py-2 text-white bg-indigo-600 border border-indigo-600 rounded-full hover:bg-indigo-700 focus:outline-none focus:ring">
+            <Link
+              href="/"
+              class="inline-flex items-center px-4 py-2 border border-accent rounded-full hover:bg-primary focus:outline-none focus:ring"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="w-3 h-3 mr-2"
