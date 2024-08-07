@@ -28,6 +28,11 @@
   src: url("/fonts/FuturaPTBook.otf");
 }
 
+@font-face {
+  font-family: "Ethnocentric";
+  src: url("/fonts/ethnocentric.otf");
+}
+
 body {
   font-family: var(--font-futura);
 }
@@ -37,7 +42,7 @@ body {
 }
 
 .font-grace {
-  font-family: var(--font-grace);
+  font-family: Ethnocentric;
 }
 
 .hero{
