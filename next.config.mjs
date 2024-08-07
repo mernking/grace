@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  siteUrl: "https://boundlessbolt.netlify.app",
+  generateRobotsTxt: true, // (optional)
   images: {
     domains: [
       "pexels.com",
