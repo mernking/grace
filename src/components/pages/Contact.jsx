@@ -8,7 +8,7 @@ export default function Contact() {
       </div>
       <div class="px-2 py-5 sm:py-5 lg:px-8">
         <form
-          action="https://formsubmit.co/davtekdon@gmail.com"
+          action="https://getform.io/f/bejyolpa"
           method="POST"
           class="mx-auto max-w-xl"
         >
@@ -132,17 +132,11 @@ export default function Contact() {
             >
               Submit →
             </button>
+
             <input
               type="hidden"
-              name="_next"
-              value="https://gracedigitalagency.netlify.app/thank"
-            />
-            <input type="hidden" name="_replyto" value="email" />
-            <input type="hidden" name="_subject" value="Client deal message" />
-            <input
-              type="hidden"
-              name="_cc"
-              value="bentlydeclan20@gmail.com, albertbros626@gmail.com"
+              name="_gotcha"
+              // style="display:none !important"
             />
           </div>
         </form>
