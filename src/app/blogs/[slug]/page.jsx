@@ -33,7 +33,10 @@ export default async function Page({ params }) {
 
       return (
         <div className="flex flex-col justify-center items-center">
-          {/* Conditionally render the blog image if `blog.image` is available */}
+          <h2 className="text-center text-3xl px-1 pb-3">{blog.title}</h2>
+          <p className="px-1 text-left">Author: {blog.author}</p>
+          <p className="px-1 text-left">Date: {blog.date}</p>
+          {/* Conditionally render the blog image if `blog.image` is available
           {blog.image && (
             <Image
               className="rounded-lg px-1"
@@ -43,11 +46,8 @@ export default async function Page({ params }) {
               height={600} // Adjust based on the actual image size or desired display size
               layout="responsive" // Optional: adjusts the image size responsively
             />
-          )}
-          <h2 className="text-center text-3xl px-1 pb-3">{blog.title}</h2>
-          <p className="px-1 text-left">Author: {blog.author}</p>
-          <p className="px-1 text-left">Date: {blog.date}</p>
-          <div>
+          )} */}
+          <div className="flex flex-col gap-5 justify-center items-center">
             {blog.sections.map((section) => (
               <div
                 key={section._id}
@@ -68,7 +68,7 @@ export default async function Page({ params }) {
                 <p className="px-1 max-w-[850px]">{section.content}</p>
                 {/* If there are subsections, you can map through them here as well */}
                 {section.subsections && section.subsections.length > 0 && (
-                  <div>
+                  <div className="flex flex-col gap-3 justify-center items-center">
                     {section.subsections.map((subsection) => (
                       <div
                         key={subsection._id}
