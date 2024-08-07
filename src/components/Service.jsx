@@ -12,6 +12,9 @@ export default function Service() {
       <div className="title text-center font-grace">
         <h1>SERVICES</h1>
       </div>
+      <div className="simpletxt text-center">
+        <p>services we provide include ..</p>
+      </div>
 
       <div className="services grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
         <div className="service flex flex-col justify-center items-center w-[300px]">

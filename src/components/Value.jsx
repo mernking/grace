@@ -12,6 +12,9 @@ export default function Value() {
       <div className="title font-grace">
         <h1>OUR VALUES</h1>
       </div>
+      <div className="simpletxt text-center">
+        <p>Our values are at the heart of everything we do.</p>
+      </div>
       <div className="values grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
         <div className="value flex flex-col justify-center items-center w-[300px]">
           <div className="icon rounded-full px-2 py-2 text-3xl">

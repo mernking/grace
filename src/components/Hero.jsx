@@ -8,8 +8,8 @@ export default function Hero() {
         <Navbar />
       </div> */}
       <div className="hero h-full">
-        <div className="w-full h-full flex flex-col justify-center items-center gap-1">
-          <h1 className="font-grace text-6xl">GRACE</h1>
+        <div className="w-full h-full text-center flex flex-col justify-center items-center gap-1">
+          <h1 className="font-grace text-3xl sm:text-6xl">BOUNDLESS BOLT</h1>
           <p className="font-grace">Digital Agency</p>
         </div>
       </div>
