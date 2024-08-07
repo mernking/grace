@@ -13,6 +13,12 @@ export async function POST(req) {
   try {
     await connectToDatabase();
     console.log("Connected to MongoDB");
+    if (await Email.findOne({ email })) {
+      return new Response(
+        JSON.stringify({ error: "Email already exists" }),
+        { status: 400 }
+      );
+    }
     const newEmail = new Email({ email });
     await newEmail.save();
 

@@ -28,7 +28,7 @@ const Blog = () => {
     };
 
     fetchBlogs();
-  }, [blogs]);
+  }, []);
 
   if (loading)
     return <p className="text-center font-grace">Blogs loading...</p>;
