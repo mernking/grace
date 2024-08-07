@@ -45,6 +45,8 @@ export default async function Page({ params }) {
             />
           )}
           <h2 className="text-center text-3xl px-1 pb-3">{blog.title}</h2>
+          <p className="px-1 text-left">Author: {blog.author}</p>
+          <p className="px-1 text-left">Date: {blog.date}</p>
           <div>
             {blog.sections.map((section) => (
               <div
