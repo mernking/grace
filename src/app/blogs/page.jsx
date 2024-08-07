@@ -47,7 +47,7 @@ const Blog = () => {
             className="hover:underline mt-5 flex flex-col gap-2 hover:text-primary transition-all py-2"
           >
             <Link
-              className="flex flex-col gap-2 justify-center items-center"
+              className="flex flex-col MAX-W-[300px] gap-2 justify-center items-center"
               href={`/blogs/${blog._id}`}
               key={blog._id}
             >
