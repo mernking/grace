@@ -22,7 +22,7 @@ export default function Navbar() {
           <div className="Logo">
             <Link href="/">
               <h1 className="font-grace text-xl hover:underline hover:text-primary transition-all">
-                GRACE
+                B.BOLT
               </h1>
             </Link>
           </div>
@@ -80,7 +80,7 @@ export default function Navbar() {
             className="hover:underline hover:text-primary transition-all"
             href="/"
           >
-            <h1>GRACE</h1>
+            <h1>B.BOLT</h1>
           </Link>
         </div>
 

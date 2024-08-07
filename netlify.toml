@@ -1,4 +1,4 @@
 [build.environment]
 MY_API_KEY = "your_api_key"
 MONGODB_URI = 'mongodb+srv://davtekdon:xLHBM8cUfO0jjR4V@graceblog.kkpvgqw.mongodb.net/?retryWrites=true&w=majority&appName=graceblog'
-API_BASE_URL = 'https://gracedigitalagency.netlify.app'
+API_BASE_URL = 'https://boundlessbolt.netlify.app'

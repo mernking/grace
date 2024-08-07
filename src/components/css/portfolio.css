@@ -1,8 +1,15 @@
- .portcard{
-    border: 2px solid var(--text);
-  }
+.portcard {
+  border: 2px solid var(--secondary);
+  transition: all 0.3s ease-in-out;
+}
+
+.portcard:hover {
+  border: 2px solid var(--primary);
+  transition: all 0.3s ease-in-out;
+}
+
 @media screen and (max-width: 550px) {
-  .portcard{
+  .portcard {
     width: 200px;
     height: 300px;
   }
