@@ -1,8 +1,36 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import "./css/newsletter.css";
+import { useState } from "react";
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        setMessage("Subscribed successfully!");
+        setEmail("");
+      } else {
+        setMessage(result.error || "Something went wrong.");
+      }
+    } catch (error) {
+      setMessage("Failed to subscribe.");
+    }
+  };
   return (
     <footer className="py-8 flex flex-col justify-center items-center overflow-x-hidden w-full">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -47,7 +75,7 @@ export default function Footer() {
             </Link>
             <Link
               className="hover:underline hover:text-accent transition-all"
-              href="/blog"
+              href="/blogs"
             >
               Blog
             </Link>
@@ -60,16 +88,25 @@ export default function Footer() {
           </div>
         </div>
         <div className="text-center flex flex-col justify-center items-center">
-          <div class="card">
-            <span class="card__title">Subscribe</span>
-            <p class="card__content">
+          <div className="card">
+            <span className="card__title">Subscribe</span>
+            <p className="card__content">
               Get fresh updates delivered straight to your inbox every week to
               keep your business in the best possible shape.
             </p>
-            <div className="card__form">
-              <input placeholder="Your Email" type="text" />
-              <button class="sign-up"> Sign up</button>
-            </div>
+            {message && <p>{message}</p>}
+            <form onSubmit={handleSubmit} className="card__form">
+              <input
+                placeholder="Your Email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <button className="sign-up" type="submit">
+                Sign up
+              </button>
+            </form>
           </div>
         </div>
       </div>

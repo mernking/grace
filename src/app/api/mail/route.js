@@ -42,7 +42,7 @@ export async function POST(req, res) {
   let mailOptionsToSender = {
     from: '"Boundless Bolt" <davtekdon@gmail.com>', // Sender address
     to: email, // Sender's email address
-    subject: "Boundless bolt has been received your message", // Subject line
+    subject: "Boundless bolt has received your message", // Subject line
     text: `Dear ${name},
 
 Thank you for contacting us. We have received your message and will get back to you as soon as possible.
