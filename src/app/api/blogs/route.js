@@ -20,7 +20,7 @@ export async function POST(req, res) {
   const { title, image, author, date, sections } = await req.json();
 
   try {
-    if (!title || !image || !author || !date || !sections) {
+    if (!title || !author ) {
       return Response.json({ error: "Missing required fields" });
     }
     if (await Blog.findOne({ title: title })) {
