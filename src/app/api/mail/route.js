@@ -40,7 +40,7 @@ export async function POST(req, res) {
 
   // Email options for the sender (confirmation email)
   let mailOptionsToSender = {
-    from: '"Boundless Bolt" <davtekdon@gmail.com>', // Sender address
+    from: '"Boundless Bolt" <boundlessbolt@gmail.com>', // Sender address
     to: email, // Sender's email address
     subject: "Boundless bolt has received your message", // Subject line
     text: `Dear ${name},
