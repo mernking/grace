@@ -2,6 +2,16 @@ import React from "react";
 import Image from "next/image";
 import Hero from "@/components/Hero";
 
+export const metadata = {
+  title: "About Boundless Bolt",
+  description:
+    "At Boundless Bolt, we are a digital agency committed to excellence. We specialize in crafting high-impact digital marketing strategies, developing cutting-edge websites, and creating compelling designs. Our team of experts is dedicated to delivering results that drive growth and elevate your brand. Partner with us to experience the difference that quality and innovation can make for your business.",
+  openGraph: {
+    title: "About Boundless Bolt",
+    description:
+      "At Boundless Bolt, we are a digital agency committed to excellence. We specialize in crafting high-impact digital marketing strategies, developing cutting-edge websites, and creating compelling designs. Our team of experts is dedicated to delivering results that drive growth and elevate your brand. Partner with us to experience the difference that quality and innovation can make for your business.",
+  },
+};
 
 export default function page() {
   return (

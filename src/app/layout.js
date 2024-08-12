@@ -13,11 +13,6 @@ const graceFont = localFont({
   variable: "--font-grace",
 });
 
-export const metadata = {
-  title: "BOUNDLESS BOLT",
-  description: "a digital agency driven by quality and not quantity",
-};
-
 export default function RootLayout({ children }) {
   return (
     <html

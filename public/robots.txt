@@ -7,3 +7,4 @@ Host: https://boundlessbolt.netlify.app
 
 # Sitemaps
 Sitemap: https://boundlessbolt.netlify.app/sitemap.xml
+Sitemap: https://boundlessbolt.netlify.app/server-sitemap-index.xml
