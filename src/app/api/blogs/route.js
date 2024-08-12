@@ -17,7 +17,8 @@ export async function GET(req, res) {
 
 export async function POST(req, res) {
   await connectToDatabase();
-  const { title, image, author, date, sections } = await req.json();
+  const { title, image, author, date, sections, description } =
+    await req.json();
 
   try {
     if (!title || !author) {
@@ -28,6 +29,7 @@ export async function POST(req, res) {
     }
     const newBlog = new Blog({
       title,
+      description,
       image,
       author,
       date,
@@ -42,7 +44,9 @@ export async function POST(req, res) {
 
 export async function PUT(req, res) {
   await connectToDatabase();
-  const { id, title, image, author, date, sections } = await req.json();
+  const { _id, title, image, author, date, sections, description } = await req.json();
+  const id = _id;
+  async;
   try {
     if (!id) {
       return Response.json({ error: "Missing required fields" });
@@ -52,6 +56,7 @@ export async function PUT(req, res) {
     }
     await Blog.findByIdAndUpdate(id, {
       title,
+      description,
       image,
       author,
       date,

@@ -12,6 +12,18 @@ import { VscTools } from "react-icons/vsc";
 import { MdOutlineComputer } from "react-icons/md";
 import { TbCloudComputing } from "react-icons/tb";
 
+export const metadata = {
+  title: "Boundless Bolt service page",
+  description:
+    "we offer a range of tailored services designed to elevate your brand and drive success. Our expertise spans digital marketing, web development, and creative design, providing comprehensive solutions to meet your unique needs.",
+  openGraph: {
+    title: "Boundless Bolt service page",
+    description:
+      "we offer a range of tailored services designed to elevate your brand and drive success. Our expertise spans digital marketing, web development, and creative design, providing comprehensive solutions to meet your unique needs.",
+  },
+};
+
+
 export default function page() {
   return (
     <div>

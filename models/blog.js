@@ -10,6 +10,11 @@ const BlogSchema = new mongoose.Schema({
   author: {
     type: String,
   },
+  description: {
+    type: String,
+    unique: true,
+    required: true,
+  },
   date: Date,
   sections: [
     {
