@@ -1,35 +1,15 @@
 import mongoose from "mongoose";
 
-const BlogSchema = new mongoose.Schema({
-  title: {
+const blogSchema = new mongoose.Schema({
+  title: { type: String, required: true },
+  coverimg: {
     type: String,
-    unique: true,
-    required: true,
+    default: "https://placehold.co/600x400/000000/FFF?text=No\nMedia",
   },
-  image: String,
-  author: {
-    type: String,
-  },
-  description: {
-    type: String,
-    unique: true,
-    required: true,
-  },
-  date: Date,
-  sections: [
-    {
-      heading: String,
-      content: String,
-      image: String,
-      subsections: [
-        {
-          subheading: String,
-          content: String,
-          image: String,
-        },
-      ],
-    },
-  ],
+  content: { type: String, required: true },
 });
 
-export default mongoose.models.Blog || mongoose.model("Blog", BlogSchema);
+// Create the Blog model
+const Blog = mongoose.models.Blog || mongoose.model("Blog", blogSchema);
+
+export default Blog;
