@@ -1,5 +1,5 @@
 {
-  "name": "boundlessbolt",
+  "name": "boundless_2.0",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,15 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "marked": "^15.0.11",
-    "mongoose": "^8.14.2",
-    "next": "15.3.2",
-    "next-sitemap": "^4.2.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "next": "15.4.3",
     "nodemailer": "^7.0.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "next-sitemap": "^4.2.3",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
+    "marked": "^15.0.11",
+    "mongoose": "^8.14.2",
     "uuid": "^11.1.0"
   },
   "devDependencies": {
