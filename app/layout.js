@@ -1,32 +1,23 @@
 import "./globals.css";
-import MobileMenu from "../components/fragments/MobileMenu";
-import Footer from "@/components/fragments/Footer";
+import Navbar from "../components/fragments/Navbar";
+import Footer from "../components/fragments/Footer";
 
 export const metadata = {
-  title: "Boundless Bolt | Web & Automation Development Agency",
-  description:
-    "Boundless Bolt is a results-driven web development agency specializing in bot development, automation systems, SaaS, Web3 solutions, APIs, and SEO. We build scalable digital solutions that drive growth and deliver measurable ROI.",
-  openGraph: {
-    title: "Boundless Bolt | Web & Automation Development Agency",
-    description:
-      "Boundless Bolt is a results-driven web development agency specializing in bot development, automation systems, SaaS, Web3 solutions, APIs, and SEO. We build scalable digital solutions that drive growth and deliver measurable ROI.",
-  },
+  metadataBase: new URL("https://boundlessbolt.com"),
+  title: "Boundless Bolt | Professional Web Development & Automation Services",
+  description: "We craft websites that win clients & grow your brand.",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <meta
-          name="google-site-verification"
-          content="qtNIeFzTQ3iGZbUZ3RWoq-xqDhrn7bUogAdbhgeh7CM"
-        />
-      </head>
-      <body className="flex flex-col bg-background text-text lg:px-40">
-        <MobileMenu />
-        <main className="flex-1 flex flex-col items-center w-full">
-          {children}
-        </main>
+    <html lang="en">
+      <body>
+        <div className="w-full flex justify-center items-baseline">
+          <div className="max-w-[1200px] w-full">
+            <Navbar />
+          </div>
+        </div>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

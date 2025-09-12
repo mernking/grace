@@ -1,5 +1,5 @@
-import connectToDatabase from "../../../lib/mongoose";
-import Email from "../../../models/email";
+import connectToDatabase from "../../../../lib/mongoose";
+import Email from "../../../../models/email";
 
 export async function POST(req) {
   const { email } = await req.json();

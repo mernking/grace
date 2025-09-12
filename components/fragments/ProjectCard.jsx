@@ -8,7 +8,7 @@ export default function ProjectCard({ data }) {
   }
 
   return (
-    <div className="w-full flex flex-col gap-5 p-3 bg-accent rounded-md">
+    <div className="w-full flex flex-col gap-5 p-3 bg-accent/60 rounded-md">
       <Image
         className="w-[400px] aspect-square object-center object-cover rounded-md"
         alt="project image 1"

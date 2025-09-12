@@ -1,7 +1,7 @@
 // generateStaticParams.js
 
-import connectToDatabase from "../../../../lib/mongoose";
-import Blog from "../../../../models/blog";
+import connectToDatabase from "../../../../../lib/mongoose";
+import Blog from "../../../../../models/blog";
 
 export async function generateStaticParams() {
   await connectToDatabase();

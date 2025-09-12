@@ -1,5 +1,5 @@
-import connectToDatabase from "../../../lib/mongoose";
-import Blog from "../../../models/blog";
+import connectToDatabase from "../../../../lib/mongoose";
+import Blog from "../../../../models/blog";
 
 export async function GET(req, res) {
   await connectToDatabase();
@@ -45,7 +45,8 @@ export async function POST(req, res) {
 
 export async function PUT(req, res) {
   await connectToDatabase();
-  const { _id, title, image, author, date, sections, description } = await req.json();
+  const { _id, title, image, author, date, sections, description } =
+    await req.json();
   const id = _id;
   async;
   try {

@@ -1,7 +1,7 @@
 // [slug]/route.js
 
-import connectToDatabase from "../../../../lib/mongoose";
-import Blog from "../../../../models/blog";
+import connectToDatabase from "../../../../../lib/mongoose";
+import Blog from "../../../../../models/blog";
 import { generateStaticParams } from "./generateStaticParams";
 
 export async function GET(req, { params }) {

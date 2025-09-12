@@ -84,9 +84,9 @@ export default function Footer() {
         <a href="/projects" className="hover:text-primary transition">
           Projects
         </a>
-        <a href="/blog" className="hover:text-primary transition">
+        {/* <a href="/blog" className="hover:text-primary transition">
           Blog
-        </a>
+        </a> */}
         <a href="/contact" className="hover:text-primary transition">
           Contact
         </a>
