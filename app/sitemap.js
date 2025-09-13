@@ -1,4 +1,4 @@
-const URL = 'https://boundlessbolt.com';
+const URL = 'https://boundlessbolt.netlify.app';
 
 export default async function sitemap() {
   const routes = ['', '/service', '/projects', '/blog', '/contact', '/about'].map((route) => ({
