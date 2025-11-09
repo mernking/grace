@@ -1,34 +1,37 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --text: #0b1419;
-    --background: #ecf3f9;
-    --primary: #1b5579;
-    --secondary: #65b8ec;
-    --accent: #0b9bf4;
-  }
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #e6eff4;
-    --background: #060d12;
-    --primary: #84bfe4;
-    --secondary: #136599;
-    --accent: #0d9af3;
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
   }
-}
-
-@theme {
-  --color-text: var(--text);
-  --color-background: var(--background);
-  --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
-  --color-accent: var(--accent);
 }
 
 body {
-  background: var(--background);
-  color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  font-family: "Courier New", Courier, monospace;
+  background-color: rgb(var(--background-end-rgb));
+}
+
+#hero {
+  background-image: url("/image/qqquad.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }
