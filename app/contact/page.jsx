@@ -41,7 +41,7 @@ export default function Page() {
             </h2>
 
             <form
-              action="https://formsubmit.co/boundlessbolt@gmail.com"
+              action="https://formsubmit.co/286a6bedf70c33e793434cfc4ee686e9"
               method="POST"
               className="space-y-5"
             >
