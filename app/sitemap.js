@@ -1,6 +1,7 @@
-import { MetadataRoute } from "next";
+// app/sitemap.js (or pages/sitemap.js depending on your Next.js version)
 
-export default function sitemap(): MetadataRoute.Sitemap {
+/** @type {import('next').MetadataRoute.Sitemap} */
+export default function sitemap() {
   const baseUrl = "https://boundlessbolt.netlify.app";
 
   return [
