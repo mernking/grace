@@ -8,7 +8,6 @@ import { TbDeviceMobileCode } from "react-icons/tb";
 import { SiOpenai } from "react-icons/si";
 import { HiSparkles } from "react-icons/hi2";
 import { FaRobot } from "react-icons/fa6";
-import { motion } from "framer-motion";
 
 export default function Service() {
   const services = [
@@ -75,13 +74,7 @@ export default function Service() {
       id="service"
       className="px-3 py-16 w-full flex gap-2 flex-col justify-center items-center"
     >
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="title text-center mb-8"
-      >
+      <div className="title text-center mb-8">
         <h1 className="text-4xl sm:text-5xl font-bold gradient-text mb-4">
           Our Services
         </h1>
@@ -89,17 +82,13 @@ export default function Service() {
           Comprehensive AI and development solutions tailored to transform your
           business
         </p>
-      </motion.div>
+      </div>
 
       <div className="servicegrid w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {services.map((service, index) => (
-          <motion.div
+          <div
             key={index}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="gridcard glass-strong rounded-2xl p-6 w-full flex flex-col justify-start items-center card-hover shadow-premium group"
+            className="gridcard glass-strong rounded-2xl p-6 w-full flex flex-col justify-start items-center card-hover shadow-premium group hover:scale-105 transition-transform duration-300"
           >
             <div
               className={`image h-[80px] w-[80px] flex justify-center items-center text-5xl rounded-2xl bg-gradient-to-br ${service.gradient} p-4 mb-4 shadow-premium-lg group-hover:scale-110 transition-transform duration-300`}
@@ -112,24 +101,18 @@ export default function Service() {
             <div className="comment text-center text-gray-400 text-sm leading-relaxed">
               <p>{service.description}</p>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.8 }}
-        className="mt-12"
-      >
+      <div className="mt-12 hover:scale-105 active:scale-95 transition-transform duration-200">
         <a
           href="/contact"
           className="inline-block px-10 py-4 rounded-xl text-center font-semibold bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-premium-lg hover-glow transition-all text-lg"
         >
           Get Started Today
         </a>
-      </motion.div>
+      </div>
     </section>
   );
 }

@@ -2,7 +2,6 @@
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import React from "react";
-import { motion } from "framer-motion";
 import { HiMail, HiPhone, HiLocationMarker } from "react-icons/hi";
 import { FaInstagram, FaFacebookF, FaYoutube } from "react-icons/fa";
 import { FaXTwitter, FaWhatsapp, FaGithub } from "react-icons/fa6";
@@ -13,12 +12,7 @@ export default function Page() {
       <Navbar />
 
       <div className="min-h-screen py-20 px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
+        <div className="text-center mb-12">
           <h1 className="text-4xl sm:text-5xl font-bold gradient-text mb-4">
             Get In Touch
           </h1>
@@ -26,16 +20,12 @@ export default function Page() {
             Ready to transform your business? Let&apos;s discuss how we can help
             you achieve your goals.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="glass-strong rounded-2xl p-8 shadow-premium"
-          >
+          {/* Contact Form */}
+          <div className="glass-strong rounded-2xl p-8 shadow-premium">
             <h2 className="text-2xl font-bold gradient-text mb-6">
               Send us a message
             </h2>
@@ -62,6 +52,11 @@ export default function Page() {
                 type="hidden"
                 name="_next"
                 value={`${process.env.NEXT_PUBLIC_BASE_URL}/thank-you`}
+              />
+              <input
+                type="hidden"
+                name="_cc"
+                value="contact@boundlessbolt.com"
               />
               {/* Auto-response enabled by default with name="email" field */}
 
@@ -193,24 +188,17 @@ export default function Page() {
               </div>
 
               {/* Submit Button */}
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+              <button
                 type="submit"
-                className="w-full px-8 py-4 rounded-xl text-center font-semibold bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-premium-lg hover-glow transition-all"
+                className="w-full px-8 py-4 rounded-xl text-center font-semibold bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-premium-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
               >
                 Send Message
-              </motion.button>
+              </button>
             </form>
-          </motion.div>
+          </div>
 
           {/* Contact Information */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="space-y-6"
-          >
+          <div className="space-y-6">
             {/* Contact Details */}
             <div className="glass-strong rounded-2xl p-8 shadow-premium">
               <h2 className="text-2xl font-bold gradient-text mb-6">
@@ -267,72 +255,60 @@ export default function Page() {
               </h2>
 
               <div className="flex flex-wrap gap-4">
-                <motion.a
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  whileTap={{ scale: 0.9 }}
+                <a
                   href="https://x.com/davidchidev"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 glass rounded-xl hover:text-gray-400 transition text-2xl"
+                  className="p-4 glass rounded-xl hover:text-gray-400 transition-all duration-200 text-2xl hover:scale-110 hover:rotate-3 active:scale-90"
                   aria-label="X (Twitter)"
                 >
                   <FaXTwitter />
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  whileTap={{ scale: 0.9 }}
+                </a>
+                <a
                   href="https://github.com/mernking"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 glass rounded-xl hover:text-gray-400 transition text-2xl"
+                  className="p-4 glass rounded-xl hover:text-gray-400 transition-all duration-200 text-2xl hover:scale-110 hover:rotate-3 active:scale-90"
                   aria-label="GitHub"
                 >
                   <FaGithub />
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  whileTap={{ scale: 0.9 }}
+                </a>
+                <a
                   href="https://www.instagram.com/amchidavid"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 glass rounded-xl hover:text-accent-pink transition text-2xl"
+                  className="p-4 glass rounded-xl hover:text-accent-pink transition-all duration-200 text-2xl hover:scale-110 hover:rotate-3 active:scale-90"
                   aria-label="Instagram"
                 >
                   <FaInstagram />
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  whileTap={{ scale: 0.9 }}
+                </a>
+                <a
                   href="https://api.whatsapp.com/send?phone=2349035853253&text=Hello%20Boundless%20Bolt,%20I%20would%20like%20to%20discuss%20your%20services"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 glass rounded-xl hover:text-green-400 transition text-2xl"
+                  className="p-4 glass rounded-xl hover:text-green-400 transition-all duration-200 text-2xl hover:scale-110 hover:rotate-3 active:scale-90"
                   aria-label="WhatsApp"
                 >
                   <FaWhatsapp />
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  whileTap={{ scale: 0.9 }}
+                </a>
+                <a
                   href="https://web.facebook.com/david.chiboy.92798"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 glass rounded-xl hover:text-primary-blue transition text-2xl"
+                  className="p-4 glass rounded-xl hover:text-primary-blue transition-all duration-200 text-2xl hover:scale-110 hover:rotate-3 active:scale-90"
                   aria-label="Facebook"
                 >
                   <FaFacebookF />
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  whileTap={{ scale: 0.9 }}
+                </a>
+                <a
                   href="https://www.youtube.com/@boundlessbolt"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 glass rounded-xl hover:text-red-500 transition text-2xl"
+                  className="p-4 glass rounded-xl hover:text-red-500 transition-all duration-200 text-2xl hover:scale-110 hover:rotate-3 active:scale-90"
                   aria-label="YouTube"
                 >
                   <FaYoutube />
-                </motion.a>
+                </a>
               </div>
             </div>
 
@@ -357,7 +333,7 @@ export default function Page() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 

@@ -2,16 +2,10 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 export default function PortfolioCard({ item, index }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-    >
+    <div>
       <Link legacyBehavior href={item.link} passHref>
         <a
           href={item.link}
@@ -59,6 +53,6 @@ export default function PortfolioCard({ item, index }) {
           </div>
         </a>
       </Link>
-    </motion.div>
+    </div>
   );
 }
