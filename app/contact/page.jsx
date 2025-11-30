@@ -49,7 +49,7 @@ export default function Page() {
               <input
                 type="hidden"
                 name="_subject"
-                value="New Contact Form Submission - Boundless Bolt"
+                value={`New Contact Form Submission - Boundless Bolt - ${new Date().toLocaleString()}`}
               />
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_template" value="box" />
