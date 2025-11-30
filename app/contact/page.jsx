@@ -58,11 +58,7 @@ export default function Page() {
                 name="_next"
                 value="http://localhost:3000/thank-you"
               />
-              <input
-                type="hidden"
-                name="_cc"
-                value="d3d78db051e70b05754dc46920f9549d"
-              />
+              {/* Auto-response enabled by default with name="email" field */}
 
               {/* Name */}
               <div>
@@ -98,6 +94,9 @@ export default function Page() {
                   className="w-full px-4 py-3 glass rounded-xl border border-white/10 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 transition-all text-white placeholder-gray-500"
                   placeholder="john@example.com"
                 />
+                <p className="text-xs text-gray-500 mt-1">
+                  We&apos;ll send a copy of your message to this address.
+                </p>
               </div>
 
               {/* Phone */}
