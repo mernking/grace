@@ -1,116 +1,97 @@
+"use client";
 import Navbar from "@/components/Navbar";
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
+import React, { useState, useMemo } from "react";
 import Footer from "@/components/Footer";
+import PortfolioCard from "@/components/fragments/PortfolioCard";
+import data from "@/components/data/portfolio";
 
-export default function page() {
+export default function Page() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedTag, setSelectedTag] = useState("All");
+
+  // Extract unique tags
+  const allTags = useMemo(() => {
+    const tags = new Set();
+    data.forEach((item) => item.tags?.forEach((t) => tags.add(t)));
+    return ["All", ...Array.from(tags)];
+  }, []);
+
+  // Filtered and searched data
+  const filteredData = useMemo(() => {
+    return data.filter((item) => {
+      const matchesSearch =
+        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.description.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesTag =
+        selectedTag === "All" || item.tags.includes(selectedTag);
+      return matchesSearch && matchesTag;
+    });
+  }, [searchTerm, selectedTag]);
+
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col max-w-7xl mx-auto">
       <Navbar />
       <section
         id="portfolio"
-        className="px-3 py-2 w-full flex gap-2 flex-col justify-center items-center"
+        className="px-3 py-6 w-full flex gap-4 flex-col justify-center items-center"
       >
-        <div className="title text-4xl py-3 font-bold">
+        <div className="title text-4xl font-bold text-center">
           <h1>Projects</h1>
         </div>
-        <div className="portgrid max-w-7xl w-full grid grid-cols-1 md:grid-cols-3 gap-2">
-          <Link legacyBehavior href="https://chidavid.netlify.app/" passHref>
-            <a
-              href="https://chidavid.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
+
+        {/* Search and Filter */}
+        {/* Search & Filter Controls */}
+        <div className="flex flex-col md:flex-row gap-3 w-full max-w-4xl justify-center items-center mt-4">
+          <div className="w-full flex flex-col md:w-1/2">
+            <label
+              className="text-sm font-semibold text-gray-300 mb-1"
+              htmlFor="search-input"
             >
-              <div className="gridcard h-full border-[1px] overflow-hidden rounded-lg p-2 w-full flex flex-col justify-center items-center">
-                <div className="image w-full filter grayscale">
-                  <Image
-                    className="w-full rounded-lg"
-                    alt={"Boundless Bolt website"}
-                    width={300}
-                    height={300}
-                    src={"/portfolio/images/david.png"}
-                  />
-                </div>
-                <div className="nametitle font-extrabold">
-                  <p>Boundless Bolt Portfolio</p>
-                </div>
-                <div className="commment">
-                  <p>
-                    this is the protfolio of Boundless Bolt, where he showcase
-                    the works he has done
-                  </p>
-                </div>
-              </div>
-            </a>
-          </Link>
-          <Link
-            legacyBehavior
-            href="https://job-agsmovers.onrender.com/"
-            passHref
-          >
-            <a
-              href="https://job-agsmovers.onrender.com/"
-              target="_blank"
-              rel="noopener noreferrer"
+              Search projects
+            </label>
+            <input
+              id="search-input"
+              type="text"
+              placeholder="Search projects..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full bg-black text-white placeholder:text-gray-400 border border-gray-700 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+          </div>
+
+          <div className="w-full flex flex-col md:w-1/3">
+            <label
+              className="text-sm font-semibold text-gray-300 mb-1"
+              htmlFor="tag-filter"
             >
-              <div className="gridcard h-full border-[1px] overflow-hidden rounded-lg p-2 w-full flex flex-col justify-center items-center">
-                <div className="image w-full filter grayscale">
-                  <Image
-                    className="w-full rounded-lg"
-                    alt={"atomic events website"}
-                    width={300}
-                    height={300}
-                    src={"/portfolio/images/agsmovers.png"}
-                  />
-                </div>
-                <div className="nametitle font-extrabold">
-                  <p>Fullstack development</p>
-                </div>
-                <div className="commment">
-                  <p>
-                    this is ags movers ob application website, where users can
-                    submit their details then the website will send it to the
-                    backend for processing the system will forward td the
-                    information to ags movers employer telegram account and
-                    still email the applicant on every form submition
-                  </p>
-                </div>
-              </div>
-            </a>
-          </Link>
-          <Link
-            legacyBehavior
-            href="https://task-management-api-2ti2.onrender.com"
-            passHref
-          >
-            <a
-              href="https://task-management-api-2ti2.onrender.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              Filter by tag
+            </label>
+            <select
+              id="tag-filter"
+              value={selectedTag}
+              onChange={(e) => setSelectedTag(e.target.value)}
+              className="w-full bg-black text-white border border-gray-700 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
             >
-              <div className="gridcard h-full border-[1px] overflow-hidden rounded-lg p-2 w-full flex flex-col justify-center items-center">
-                <div className="image w-full filter grayscale">
-                  <Image
-                    className="w-full rounded-lg"
-                    alt={"Task management API"}
-                    width={300}
-                    height={300}
-                    src={"/portfolio/images/taskmanager.png"}
-                  />
-                </div>
-                <div className="nametitle font-extrabold">
-                  <p>API development</p>
-                </div>
-                <div className="commment">
-                  <p>
-                    this is a task management api i made, for public use. kindly
-                    refer to the documentation
-                  </p>
-                </div>
-              </div>
-            </a>
-          </Link>
+              {allTags.map((tag, index) => (
+                <option key={index} value={tag}>
+                  {tag}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        {/* Portfolio Grid */}
+        <div className="portgrid max-w-7xl w-full grid grid-cols-1 md:grid-cols-3 gap-3 mt-6">
+          {filteredData.length > 0 ? (
+            filteredData.map((item, index) => (
+              <PortfolioCard key={index} item={item} />
+            ))
+          ) : (
+            <p className="text-gray-600 text-center w-full py-8">
+              No projects found.
+            </p>
+          )}
         </div>
       </section>
       <Footer />

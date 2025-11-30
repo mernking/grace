@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Portfolio from "@/components/Portfolio";
 import Service from "@/components/Service";
-import Whyme from "@/components/Whyme";
+import TechStack from "@/components/Whyme";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       {/* <Navbar /> */}
       <Hero />
       <Portfolio />
-      <Whyme />
+      <TechStack />
       <Service />
       <Footer />
     </div>

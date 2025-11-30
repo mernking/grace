@@ -1,163 +1,156 @@
+"use client";
 import React from "react";
-import { RiJavascriptFill } from "react-icons/ri";
-import { RiNextjsLine } from "react-icons/ri";
-import { FaGolang, FaReact } from "react-icons/fa6";
-import { BiLogoTailwindCss } from "react-icons/bi";
-import { FaNodeJs } from "react-icons/fa";
-import { SiMongodb } from "react-icons/si";
-import { BiLogoShopify } from "react-icons/bi";
-import { SiSolidity } from "react-icons/si";
+import { RiJavascriptFill, RiNextjsLine } from "react-icons/ri";
+import { FaGolang, FaReact, FaNodeJs, FaPython } from "react-icons/fa6";
+import { BiLogoTailwindCss, BiLogoShopify } from "react-icons/bi";
+import {
+  SiMongodb,
+  SiSolidity,
+  SiOpenai,
+  SiTensorflow,
+  SiPytorch,
+} from "react-icons/si";
 import { RiHtml5Line } from "react-icons/ri";
 import { FaCss3Alt } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
-
-
-
-
-
-
-
-export default function Whyme() {
-  const progress = 70; // Ensure this is a valid integer between 0 and 100
-  const progressStyle = {
-    width: `${progress}%`,
-    backgroundColor: "white",
-    height: "20px",
-    borderRadius: "5px",
-    transition: "width 0.3s ease-in-out",
-  };
+export default function TechStack() {
+  const technologies = [
+    {
+      icon: <SiOpenai />,
+      name: "OpenAI / Claude",
+      gradient: "from-green-500 to-emerald-600",
+    },
+    {
+      icon: <FaPython />,
+      name: "Python & AI/ML",
+      gradient: "from-blue-500 to-yellow-500",
+    },
+    {
+      icon: <SiTensorflow />,
+      name: "TensorFlow",
+      gradient: "from-orange-500 to-yellow-500",
+    },
+    {
+      icon: <SiPytorch />,
+      name: "PyTorch",
+      gradient: "from-red-500 to-orange-500",
+    },
+    {
+      icon: <RiJavascriptFill />,
+      name: "JavaScript",
+      gradient: "from-yellow-400 to-yellow-600",
+    },
+    {
+      icon: <RiNextjsLine />,
+      name: "Next.js",
+      gradient: "from-gray-700 to-gray-900",
+    },
+    {
+      icon: <FaReact />,
+      name: "React.js",
+      gradient: "from-cyan-400 to-blue-500",
+    },
+    {
+      icon: <BiLogoTailwindCss />,
+      name: "Tailwind CSS",
+      gradient: "from-cyan-500 to-blue-600",
+    },
+    {
+      icon: <FaNodeJs />,
+      name: "Node.js",
+      gradient: "from-green-600 to-green-800",
+    },
+    {
+      icon: <FaGolang />,
+      name: "Golang",
+      gradient: "from-cyan-500 to-blue-700",
+    },
+    {
+      icon: <SiMongodb />,
+      name: "MongoDB",
+      gradient: "from-green-500 to-green-700",
+    },
+    {
+      icon: <SiSolidity />,
+      name: "Solidity",
+      gradient: "from-gray-600 to-gray-800",
+    },
+    {
+      icon: <RiHtml5Line />,
+      name: "HTML5",
+      gradient: "from-orange-500 to-red-500",
+    },
+    {
+      icon: <FaCss3Alt />,
+      name: "CSS3",
+      gradient: "from-blue-500 to-blue-700",
+    },
+    {
+      icon: <BiLogoShopify />,
+      name: "Shopify/Liquid",
+      gradient: "from-green-600 to-green-800",
+    },
+  ];
 
   return (
     <section
       id="skill"
-      className="px-3 py-2 w-full flex gap-2 flex-col justify-center items-center"
+      className="px-3 py-16 w-full flex gap-2 flex-col justify-center items-center"
     >
-      <div className="title text-2xl py-3 font-bold">
-        <h1>Skills</h1>
-      </div>
-      <div className="skillgrid w-full grid grid-cols-2 sm:grid-cols-3 gap-2">
-        {/* <div className="skillcontainer py-4 p-2 rounded-lg border-[1px]">
-          <div className="proresstitle">
-            <h3>Javascript</h3>
-          </div>
-          <div className="progress-bar-container w-full">
-            <div style={progressStyle}></div>
-          </div>
-        </div>
-        <div className="skillcontainer py-4 p-2 rounded-lg border-[1px]">
-          <div className="proresstitle">
-            <h3>Node, mongodb</h3>
-          </div>
-          <div className="progress-bar-container w-full">
-            <div style={progressStyle}></div>
-          </div>
-        </div>
-        <div className="skillcontainer py-4 p-2 rounded-lg border-[1px]">
-          <div className="proresstitle">
-            <h3>Html, Reactjs, Nextjs</h3>
-          </div>
-          <div className="progress-bar-container w-full">
-            <div style={progressStyle}></div>
-          </div>
-        </div>
-        <div className="skillcontainer py-4 p-2 rounded-lg border-[1px]">
-          <div className="proresstitle">
-            <h3>Vanila Css & Tailwind</h3>
-          </div>
-          <div className="progress-bar-container w-full">
-            <div style={progressStyle}></div>
-          </div>
-        </div>
-        <div className="skillcontainer py-4 p-2 rounded-lg border-[1px]">
-          <div className="proresstitle">
-            <h3>Liquid</h3>
-          </div>
-          <div className="progress-bar-container w-full">
-            <div style={progressStyle}></div>
-          </div>
-        </div>
-        <div className="skillcontainer py-4 p-2 rounded-lg border-[1px]">
-          <div className="proresstitle">
-            <h3>Solidity</h3>
-          </div>
-          <div className="progress-bar-container w-full">
-            <div style={progressStyle}></div>
-          </div>
-        </div> */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="title text-center mb-8"
+      >
+        <h1 className="text-4xl sm:text-5xl font-bold gradient-text mb-4">
+          Our Technology Stack
+        </h1>
+        <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          Leveraging cutting-edge technologies and AI frameworks to build
+          intelligent, scalable solutions
+        </p>
+      </motion.div>
 
-        <div className="skillcontainer py-8 p-2 flex flex-col items-center justify-center gap-3 rounded-lg border-[1px]">
-          <div className="skillicon text-5xl">
-            <RiJavascriptFill />
-          </div>
-          <div className="proresstitle">
-            <h3>Javascript</h3>
-          </div>
-        </div>
-        <div className="skillcontainer py-8 p-2 flex flex-col items-center justify-center gap-3 rounded-lg border-[1px]">
-          <div className="skillicon text-5xl">
-            <RiNextjsLine />
-          </div>
-          <div className="proresstitle">
-            <h3>Next js</h3>
-          </div>
-        </div>
-        <div className="skillcontainer py-8 p-2 flex flex-col items-center justify-center gap-3 rounded-lg border-[1px]">
-          <div className="skillicon text-5xl">
-            <FaReact />
-          </div>
-          <div className="proresstitle">
-            <h3>React js</h3>
-          </div>
-        </div>
-        <div className="skillcontainer py-8 p-2 flex flex-col items-center justify-center gap-3 rounded-lg border-[1px]">
-          <div className="skillicon text-5xl">
-            <BiLogoTailwindCss />
-          </div>
-          <div className="proresstitle">
-            <h3>Tailwind</h3>
-          </div>
-        </div>
-        <div className="skillcontainer py-8 p-2 flex flex-col items-center justify-center gap-3 rounded-lg border-[1px]">
-          <div className="skillicon text-5xl flex flex-row gap-2">
-            <FaNodeJs /> + <FaGolang />
-          </div>
-          <div className="proresstitle">
-            <h3>Node js + GO</h3>
-          </div>
-        </div>
-        <div className="skillcontainer py-8 p-2 flex flex-col items-center justify-center gap-3 rounded-lg border-[1px]">
-          <div className="skillicon text-5xl">
-            <SiMongodb />
-          </div>
-          <div className="proresstitle">
-            <h3>MongoDB</h3>
-          </div>
-        </div>
-        <div className="skillcontainer py-8 p-2 flex flex-col items-center justify-center gap-3 rounded-lg border-[1px]">
-          <div className="skillicon text-5xl">
-            <SiSolidity />
-          </div>
-          <div className="proresstitle">
-            <h3>Solidity</h3>
-          </div>
-        </div>
-        <div className="skillcontainer py-8 p-2 flex flex-col items-center justify-center gap-3 rounded-lg border-[1px]">
-          <div className="skillicon text-5xl flex flex-row gap-2">
-            <RiHtml5Line /> + <FaCss3Alt />
-          </div>
-          <div className="proresstitle">
-            <h3>HTML & CSS</h3>
-          </div>
-        </div>
-        <div className="skillcontainer py-8 p-2 flex flex-col items-center justify-center gap-3 rounded-lg border-[1px]">
-          <div className="skillicon text-5xl">
-            <BiLogoShopify />
-          </div>
-          <div className="proresstitle">
-            <h3>Liquid</h3>
-          </div>
-        </div>
+      <div className="skillgrid w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        {technologies.map((tech, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: index * 0.05 }}
+            className="skillcontainer glass-strong rounded-2xl p-6 flex flex-col items-center justify-center gap-4 card-hover shadow-premium group"
+          >
+            <div
+              className={`skillicon text-6xl text-white group-hover:scale-110 transition-transform duration-300`}
+            >
+              {tech.icon}
+            </div>
+            <div className="proresstitle text-center">
+              <h3 className="text-sm font-semibold text-gray-300">
+                {tech.name}
+              </h3>
+            </div>
+          </motion.div>
+        ))}
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.6 }}
+        className="mt-12 text-center max-w-3xl"
+      >
+        <p className="text-gray-400 text-lg leading-relaxed">
+          Our team stays at the forefront of technology, continuously learning
+          and adapting to deliver innovative AI-powered solutions that drive
+          real business value.
+        </p>
+      </motion.div>
     </section>
   );
 }

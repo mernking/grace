@@ -1,0 +1,197 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://boundlessbolt.netlify.app/#organization",
+      "name": "Boundless Bolt",
+      "url": "https://boundlessbolt.netlify.app",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://boundlessbolt.netlify.app/logo.png"
+      },
+      "description": "Expert full-stack development, AI automation, intelligent agents, blockchain, and modern web solutions. Transform your business with cutting-edge technology.",
+      "email": "contact@boundlessbolt.com",
+      "telephone": "+234-903-585-3253",
+      "sameAs": [
+        "https://x.com/davidchidev",
+        "https://github.com/mernking",
+        "https://www.instagram.com/amchidavid",
+        "https://web.facebook.com/david.chiboy.92798",
+        "https://www.youtube.com/@boundlessbolt"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Global"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://boundlessbolt.netlify.app/#website",
+      "url": "https://boundlessbolt.netlify.app",
+      "name": "Boundless Bolt",
+      "description": "Full-Stack Development & AI Solutions",
+      "publisher": {
+        "@id": "https://boundlessbolt.netlify.app/#organization"
+      }
+    },
+    {
+      "@type": "ProfessionalService",
+      "name": "Boundless Bolt",
+      "image": "https://boundlessbolt.netlify.app/logo.png",
+      "url": "https://boundlessbolt.netlify.app",
+      "telephone": "+234-903-585-3253",
+      "email": "contact@boundlessbolt.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Global"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "0",
+        "longitude": "0"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "10:00",
+          "closes": "16:00"
+        }
+      ],
+      "serviceType": [
+        "AI Automation",
+        "Agentic AI Development",
+        "AI Agents Development",
+        "Full-Stack Web Development",
+        "Mobile App Development",
+        "Blockchain Development",
+        "Website Optimization",
+        "Custom Software Development"
+      ],
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": "0",
+          "longitude": "0"
+        },
+        "geoRadius": "20000000"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "name": "Services Offered",
+      "itemListElement": [
+        {
+          "@type": "Service",
+          "name": "AI Automation",
+          "description": "Streamline your business operations with intelligent automation solutions that reduce manual work and increase efficiency.",
+          "provider": {
+            "@id": "https://boundlessbolt.netlify.app/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Agentic AI Development",
+          "description": "Build autonomous AI systems that can make decisions, learn from interactions, and adapt to changing environments.",
+          "provider": {
+            "@id": "https://boundlessbolt.netlify.app/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "AI Agents Development",
+          "description": "Create intelligent, adaptive agents that can handle complex tasks and provide personalized experiences.",
+          "provider": {
+            "@id": "https://boundlessbolt.netlify.app/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Full-Stack Web Development",
+          "description": "Modern, responsive web applications built with cutting-edge technologies like Next.js, React, and Node.js.",
+          "provider": {
+            "@id": "https://boundlessbolt.netlify.app/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Mobile App Development",
+          "description": "Cross-platform mobile applications that work seamlessly on iOS and Android devices.",
+          "provider": {
+            "@id": "https://boundlessbolt.netlify.app/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Blockchain Development",
+          "description": "Decentralized applications and smart contracts built on blockchain technology.",
+          "provider": {
+            "@id": "https://boundlessbolt.netlify.app/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Website Optimization",
+          "description": "Performance optimization, SEO enhancement, and user experience improvements for existing websites.",
+          "provider": {
+            "@id": "https://boundlessbolt.netlify.app/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "name": "Custom Software Development",
+          "description": "Tailored software solutions designed to meet your specific business needs and requirements.",
+          "provider": {
+            "@id": "https://boundlessbolt.netlify.app/#organization"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What services does Boundless Bolt offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Boundless Bolt offers AI automation, agentic AI development, AI agents development, full-stack web development, mobile app development, blockchain development, website optimization, and custom software development services."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What technologies does Boundless Bolt use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We use cutting-edge technologies including OpenAI, Claude, Python, TensorFlow, PyTorch for AI; JavaScript, Next.js, React.js, Node.js, Golang for web development; MongoDB for databases; Solidity for blockchain; and Tailwind CSS for styling."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I contact Boundless Bolt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can contact us via email at contact@boundlessbolt.com, call us at +234-903-585-3253, or fill out the contact form on our website. We're available Monday-Friday 9AM-6PM and Saturday 10AM-4PM."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Boundless Bolt work with international clients?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Boundless Bolt provides global services and works with clients worldwide. We offer remote collaboration and can adapt to different time zones."
+          }
+        }
+      ]
+    }
+  ]
+}
