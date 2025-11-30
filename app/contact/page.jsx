@@ -41,7 +41,7 @@ export default function Page() {
             </h2>
 
             <form
-              action="https://formsubmit.co/286a6bedf70c33e793434cfc4ee686e9"
+              action="https://formsubmit.co/boundlessbolt@gmail.com"
               method="POST"
               className="space-y-5"
             >
@@ -56,7 +56,7 @@ export default function Page() {
               <input
                 type="hidden"
                 name="_next"
-                value="http://localhost:3000/thank-you"
+                value={`${process.env.NEXT_PUBLIC_BASE_URL}/thank-you`}
               />
               {/* Auto-response enabled by default with name="email" field */}
 
