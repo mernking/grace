@@ -1,9 +1,9 @@
 "use client";
-import Navbar from "@/components/Navbar";
+import Navbar from "../../components/Navbar";
 import React, { useState, useMemo } from "react";
-import Footer from "@/components/Footer";
-import PortfolioCard from "@/components/fragments/PortfolioCard";
-import data from "@/components/data/portfolio";
+import Footer from "../../components/Footer";
+import PortfolioCard from "../../components/fragments/PortfolioCard";
+import data from "../../components/data/portfolio";
 
 export default function Page() {
   const [searchTerm, setSearchTerm] = useState("");

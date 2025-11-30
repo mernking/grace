@@ -1,6 +1,6 @@
 "use client";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar";
 import React from "react";
 import { motion } from "framer-motion";
 import { HiMail, HiPhone, HiLocationMarker } from "react-icons/hi";
@@ -23,8 +23,8 @@ export default function Page() {
             Get In Touch
           </h1>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Ready to transform your business? Let's discuss how we can help you
-            achieve your goals.
+            Ready to transform your business? Let&apos;s discuss how we can help
+            you achieve your goals.
           </p>
         </motion.div>
 

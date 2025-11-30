@@ -1,9 +1,9 @@
-import Footer from "@/components/Footer";
-import Hero from "@/components/Hero";
-import Navbar from "@/components/Navbar";
-import Portfolio from "@/components/Portfolio";
-import Service from "@/components/Service";
-import TechStack from "@/components/Whyme";
+import Footer from "../components/Footer";
+import Hero from "../components/Hero";
+import Navbar from "../components/Navbar";
+import Portfolio from "../components/Portfolio";
+import Service from "../components/Service";
+import TechStack from "../components/Whyme";
 
 export default function Home() {
   return (

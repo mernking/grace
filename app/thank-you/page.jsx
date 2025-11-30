@@ -39,8 +39,8 @@ export default function ThankYouPage() {
           transition={{ delay: 0.4 }}
           className="text-gray-400 text-lg mb-8"
         >
-          Your message has been successfully sent. We've received your inquiry
-          and will get back to you within 24 hours.
+          Your message has been successfully sent. We&apos;ve received your
+          inquiry and will get back to you within 24 hours.
         </motion.p>
 
         <motion.div
@@ -55,7 +55,7 @@ export default function ThankYouPage() {
           <ul className="text-gray-400 space-y-2 text-left">
             <li className="flex items-start gap-2">
               <span className="text-green-500 mt-1">✓</span>
-              <span>You'll receive a confirmation email shortly</span>
+              <span>You&apos;ll receive a confirmation email shortly</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-green-500 mt-1">✓</span>
@@ -64,7 +64,7 @@ export default function ThankYouPage() {
             <li className="flex items-start gap-2">
               <span className="text-green-500 mt-1">✓</span>
               <span>
-                We'll reach out within 24 hours to discuss your project
+                We&apos;ll reach out within 24 hours to discuss your project
               </span>
             </li>
           </ul>

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import PortfolioCard from "./fragments/PortfolioCard";
-import data from "@/components/data/portfolio";
+import data from "./data/portfolio";
 
 export default function Portfolio() {
   const limit = 3;
