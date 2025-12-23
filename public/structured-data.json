@@ -16,8 +16,8 @@
       "sameAs": [
         "https://x.com/davidchidev",
         "https://github.com/mernking",
-        "https://www.instagram.com/amchidavid",
-        "https://web.facebook.com/david.chiboy.92798",
+        "https://www.instagram.com/davidchidev",
+        "https://web.facebook.com/profile.php?id=61585469555973",
         "https://www.youtube.com/@boundlessbolt"
       ],
       "address": {
@@ -55,7 +55,13 @@
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
           "opens": "09:00",
           "closes": "18:00"
         },

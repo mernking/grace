@@ -65,7 +65,7 @@ Boundless Bolt is a professional software development company specializing in AI
 
 - Twitter/X: @davidchidev
 - GitHub: @mernking
-- Instagram: @amchidavid
+- Instagram: @davidchidev
 - Facebook: david.chiboy.92798
 - YouTube: @boundlessbolt
 

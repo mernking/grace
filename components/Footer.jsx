@@ -24,7 +24,7 @@ export default function Footer() {
     },
     {
       icon: <FaInstagram />,
-      href: "https://www.instagram.com/amchidavid",
+      href: "https://www.instagram.com/davidchidev",
       label: "Instagram",
       color: "hover:text-accent-pink",
     },
@@ -36,7 +36,7 @@ export default function Footer() {
     },
     {
       icon: <FaFacebookF />,
-      href: "https://web.facebook.com/david.chiboy.92798",
+      href: "https://web.facebook.com/profile.php?id=61585469555973",
       label: "Facebook",
       color: "hover:text-primary-blue",
     },

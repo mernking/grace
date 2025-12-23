@@ -1,11 +1,17 @@
-// import { Inter } from "next/font/google";
-// import { Courier_Prime } from "next/font/google"; // Import Courier Prime
 import "./globals.css";
+import { Inter, Space_Grotesk } from "next/font/google";
 
-// const inter = Inter({ subsets: ["latin"] });
-// const courierPrime = Courier_Prime({ weight: "400", subsets: ["latin"] }); // Define Courier Prime
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
-// ${inter.className} ${courierPrime.className}
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-space-grotesk",
+});
 
 export const metadata = {
   title: {
@@ -91,7 +97,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <head>
         <meta
           name="google-site-verification"
@@ -115,8 +121,8 @@ export default function RootLayout({ children }) {
               sameAs: [
                 "https://x.com/davidchidev",
                 "https://github.com/mernking",
-                "https://www.instagram.com/amchidavid",
-                "https://web.facebook.com/david.chiboy.92798",
+                "https://www.instagram.com/davidchidev",
+                "https://web.facebook.com/profile.php?id=61585469555973",
                 "https://www.youtube.com/@boundlessbolt",
               ],
               serviceType: [
@@ -132,7 +138,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className="bg-black text-white">
+      <body className="bg-black text-white font-sans antialiased">
         <div className="flex flex-col items-center justify-center">
           {children}
         </div>

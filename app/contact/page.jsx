@@ -274,7 +274,7 @@ export default function Page() {
                   <FaGithub />
                 </a>
                 <a
-                  href="https://www.instagram.com/amchidavid"
+                  href="https://www.instagram.com/davidchidev"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-4 glass rounded-xl hover:text-accent-pink transition-all duration-200 text-2xl hover:scale-110 hover:rotate-3 active:scale-90"
@@ -292,7 +292,7 @@ export default function Page() {
                   <FaWhatsapp />
                 </a>
                 <a
-                  href="https://web.facebook.com/david.chiboy.92798"
+                  href="https://web.facebook.com/profile.php?id=61585469555973"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-4 glass rounded-xl hover:text-primary-blue transition-all duration-200 text-2xl hover:scale-110 hover:rotate-3 active:scale-90"
