@@ -16,56 +16,48 @@ export default function Service() {
       title: "AI Automation",
       description:
         "Streamline your business operations with intelligent AI-powered automation solutions that reduce manual work, increase efficiency, and drive growth.",
-      gradient: "from-purple-500 to-blue-500",
     },
     {
       icon: <HiSparkles />,
       title: "Agentic AI Development",
       description:
         "Build sophisticated autonomous AI systems that can reason, plan, and execute complex tasks independently with cutting-edge agentic AI technology.",
-      gradient: "from-blue-500 to-cyan-500",
     },
     {
       icon: <FaRobot />,
       title: "AI Agents Development",
       description:
         "Create intelligent AI agents that interact, learn, and adapt to your business needs, providing personalized and context-aware solutions.",
-      gradient: "from-cyan-500 to-purple-500",
     },
     {
       icon: <GoDatabase />,
       title: "Backend Development",
       description:
         "Reliable backend development services that power your applications with smooth performance, strong security, and easy scalability.",
-      gradient: "from-purple-600 to-pink-500",
     },
     {
       icon: <CgWebsite />,
       title: "Frontend Development",
       description:
         "Creating visually stunning, user-friendly interfaces, ensuring a seamless and engaging experience across all devices.",
-      gradient: "from-pink-500 to-blue-500",
     },
     {
       icon: <GoRocket />,
       title: "Website Optimization",
       description:
         "Boost your site's speed, improve performance, and enhance user experience, ensuring faster load times and higher search rankings.",
-      gradient: "from-blue-500 to-purple-500",
     },
     {
       icon: <SiChainlink />,
       title: "Blockchain Development",
       description:
         "Build secure, decentralized applications, leveraging blockchain technology for transparent, scalable, and innovative solutions.",
-      gradient: "from-purple-500 to-cyan-500",
     },
     {
       icon: <TbDeviceMobileCode />,
       title: "Multiplatform App Development",
       description:
         "Create seamless, high-quality applications that work across various devices and operating systems, ensuring a consistent user experience everywhere.",
-      gradient: "from-cyan-500 to-blue-500",
     },
   ];
 
@@ -90,13 +82,13 @@ export default function Service() {
             key={index}
             className="gridcard glass-strong rounded-2xl p-6 w-full flex flex-col justify-start items-center card-hover shadow-premium group hover:scale-105 transition-transform duration-300"
           >
-            <div
-              className={`image h-[80px] w-[80px] flex justify-center items-center text-5xl rounded-2xl bg-gradient-to-br ${service.gradient} p-4 mb-4 shadow-premium-lg group-hover:scale-110 transition-transform duration-300`}
-            >
+            <div className="image h-[80px] w-[80px] flex justify-center items-center text-5xl rounded-2xl bg-primary-purple p-4 mb-4 shadow-premium-lg group-hover:scale-110 transition-transform duration-300">
               {service.icon}
             </div>
             <div className="nametitle font-extrabold text-xl mb-3 text-center">
-              <p className="gradient-text">{service.title}</p>
+              <p className="text-white group-hover:text-primary-purple transition-colors">
+                {service.title}
+              </p>
             </div>
             <div className="comment text-center text-gray-400 text-sm leading-relaxed">
               <p>{service.description}</p>
@@ -108,7 +100,7 @@ export default function Service() {
       <div className="mt-12 hover:scale-105 active:scale-95 transition-transform duration-200">
         <a
           href="/contact"
-          className="inline-block px-10 py-4 rounded-xl text-center font-semibold bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-premium-lg hover-glow transition-all text-lg"
+          className="inline-block px-10 py-4 rounded-xl text-center font-semibold bg-primary-purple hover:bg-primary-purple-dark shadow-premium-lg hover-glow transition-all text-lg"
         >
           Get Started Today
         </a>

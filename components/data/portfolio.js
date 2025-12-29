@@ -21,6 +21,41 @@ const data = [
     ],
   },
   {
+    title: "AI-Powered Contract redlining bot",
+    image: "/portfolio/images/contract.png",
+    description:
+      "AI Contract Redline Bot is an intelligent legal automation tool designed to streamline the contract review process. By leveraging artificial intelligence, this application automatically scans legal documents to identify potential risks, highlight critical clauses, and suggest redlines.",
+    link: "https://contract-redline-bot.netlify.app",
+    tags: [
+      "Drizzle",
+      "AI",
+      "Supabase",
+      "REST API",
+      "Next.js",
+      "Tailwind",
+      "Fullstack",
+      "AI Insights",
+    ],
+  },
+  {
+    title: "Real-Time Bible Streaming Platform",
+    image: "/portfolio/images/bibleplugin.png",
+    description:
+      "Sophisticated real-time streaming application using WebSocket technology for live video overlay integration. Enables seamless content delivery with intelligent synchronization.",
+    link: "https://github.com/mernking/bible-server",
+    tags: [
+      "React",
+      "TailwindCSS",
+      "Socket.io",
+      "WebSockets",
+      "Real-time",
+      "Node.js",
+      "Express",
+      "Streaming",
+      "Fullstack",
+    ],
+  },
+  {
     title: "Customer Review Analysis Solution",
     image: "/portfolio/images/customerReviewAi.png",
     description:
@@ -38,24 +73,24 @@ const data = [
       "Fullstack",
     ],
   },
-  //  {
-  //   title: "ConverPulse Tracker",
-  //   image: "/portfolio/images/customerReviewAi.png",
-  //   description:
-  //     " the review analysis uses Google Gemini instead of OpenAI, providing comparable or better performance for sentiment analysis and summarization while leveraging free-tier access for development.",
-  //   link: "https://github.com/mernking/customer-review-analysis-ai",
-  //   tags: [
-  //     "Drizzle",
-  //     "AI",
-  //     "langchain",
-  //     "PostgreSQL",
-  //     "REST API",
-  //     "React",
-  //     "Next.js",
-  //     "Tailwind",
-  //     "Fullstack",
-  //   ],
-  // },
+  {
+    title: "ConverPulse Tracker",
+    image: "/portfolio/images/converpluse.png",
+    description:
+      "a projects that help in tracting social media convertion rate how many clients got converted through your social media posts",
+    link: "#",
+    tags: [
+      "Drizzle",
+      "AI",
+      "langchain",
+      "PostgreSQL",
+      "REST API",
+      "React",
+      "Next.js",
+      "Tailwind",
+      "Fullstack",
+    ],
+  },
   {
     title: "Form Submission Telegram Bot",
     image: "/portfolio/images/formtgbot.png",
@@ -94,36 +129,19 @@ const data = [
     ],
   },
   {
-    title: "Real-Time Bible Streaming Platform",
-    image: "/portfolio/images/bibleplugin.png",
+    title: "AI-Powered telegram chat Summarize Bot",
+    image: "/portfolio/images/summarizeBot.png",
     description:
-      "Sophisticated real-time streaming application using WebSocket technology for live video overlay integration. Enables seamless content delivery with intelligent synchronization.",
-    link: "https://github.com/mernking/bible-server",
+      "AI Chat Summarizer for Telegram A smart bot that helps you catch up on group conversations instantly. It uses AI to digest the last 5 hours of messages into a concise summary, so you stay in the loop without the endless scrolling.",
+    link: "#",
     tags: [
-      "React",
-      "TailwindCSS",
-      "Socket.io",
-      "WebSockets",
-      "Real-time",
-      "Node.js",
-      "Express",
-      "Streaming",
-      "Fullstack",
-    ],
-  },
-  {
-    title: "Boundless Bolt Business Platform",
-    image: "/portfolio/images/david.png",
-    description:
-      "Professional business website showcasing AI automation services, agentic AI development, and intelligent solutions portfolio with modern design and premium user experience.",
-    link: "https://chidavid.netlify.app/",
-    tags: [
+      "Telegram",
+      "Drizzle",
+      "AI",
+      "MCP",
       "Next.js",
-      "React",
-      "TailwindCSS",
-      "AI Services",
-      "Business",
-      "Modern Design",
+      "Tailwind",
+      "Fullstack",
     ],
   },
   {
@@ -131,7 +149,7 @@ const data = [
     image: "/portfolio/images/agsmovers.png",
     description:
       "Intelligent job application automation platform with instant notification system via Telegram API and automated email confirmations. Streamlines recruitment workflow with AI-powered processing.",
-    link: "https://job-agsmovers.onrender.com/",
+    link: "#",
     tags: [
       "Node.js",
       "Express",

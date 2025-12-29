@@ -36,10 +36,9 @@ export default function Page() {
         className="px-3 py-6 w-full flex gap-4 flex-col justify-center items-center"
       >
         <div className="title text-4xl font-bold text-center">
-          <h1>Projects</h1>
+          <h1 className="gradient-text">Projects</h1>
         </div>
 
-        {/* Search and Filter */}
         {/* Search & Filter Controls */}
         <div className="flex flex-col md:flex-row gap-3 w-full max-w-4xl justify-center items-center mt-4">
           <div className="w-full flex flex-col md:w-1/2">
@@ -55,7 +54,7 @@ export default function Page() {
               placeholder="Search projects..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full bg-black text-white placeholder:text-gray-400 border border-gray-700 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full glass text-white placeholder:text-gray-500 border border-white/10 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-purple focus:border-primary-purple"
             />
           </div>
 
@@ -70,10 +69,10 @@ export default function Page() {
               id="tag-filter"
               value={selectedTag}
               onChange={(e) => setSelectedTag(e.target.value)}
-              className="w-full bg-black text-white border border-gray-700 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full glass text-white border border-white/10 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-purple focus:border-primary-purple bg-transparent"
             >
               {allTags.map((tag, index) => (
-                <option key={index} value={tag}>
+                <option key={index} value={tag} className="bg-black">
                   {tag}
                 </option>
               ))}
@@ -88,7 +87,7 @@ export default function Page() {
               <PortfolioCard key={index} item={item} />
             ))
           ) : (
-            <p className="text-gray-600 text-center w-full py-8">
+            <p className="text-gray-500 text-center w-full py-8">
               No projects found.
             </p>
           )}

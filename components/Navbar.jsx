@@ -34,7 +34,6 @@ export default function Navbar() {
     <section className="w-full flex justify-center items-center relative z-50">
       <div className="max-w-[1200px] w-full">
         {/* Desktop Navbar */}
-        {/* Desktop Navbar */}
         <div
           className={`desktop w-full justify-between items-center px-6 py-4 flex transition-all duration-300 ${
             scrolled ? "glass-strong shadow-premium-lg" : "bg-transparent"
@@ -54,10 +53,10 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="relative group font-medium hover:text-primary-blue transition-colors duration-300"
+                className="relative group font-medium hover:text-primary-purple transition-colors duration-300"
               >
                 {link.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-purple group-hover:w-full transition-all duration-300"></span>
               </Link>
             ))}
           </div>
@@ -82,7 +81,7 @@ export default function Navbar() {
                 <div key={link.name} onClick={handleMenu}>
                   <Link
                     href={link.href}
-                    className="block w-full glass rounded-xl text-center text-white hover:bg-gradient-to-r hover:from-purple-600 hover:to-blue-600 py-3 transition-all font-medium"
+                    className="block w-full glass rounded-xl text-center text-white hover:bg-primary-purple py-3 transition-all font-medium"
                   >
                     {link.name}
                   </Link>

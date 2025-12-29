@@ -24,9 +24,8 @@ export default function Page() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Contact Form */}
-          {/* Contact Form */}
           <div className="glass-strong rounded-2xl p-8 shadow-premium">
-            <h2 className="text-2xl font-bold gradient-text mb-6">
+            <h2 className="text-2xl font-bold text-white mb-6">
               Send us a message
             </h2>
 
@@ -58,7 +57,6 @@ export default function Page() {
                 name="_cc"
                 value="contact@boundlessbolt.com"
               />
-              {/* Auto-response enabled by default with name="email" field */}
 
               {/* Name */}
               <div>
@@ -73,7 +71,7 @@ export default function Page() {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-3 glass rounded-xl border border-white/10 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 transition-all text-white placeholder-gray-500"
+                  className="w-full px-4 py-3 glass rounded-xl border border-white/10 focus:border-primary-purple focus:outline-none focus:ring-2 focus:ring-primary-purple/50 transition-all text-white placeholder-gray-500"
                   placeholder="John Doe"
                 />
               </div>
@@ -91,7 +89,7 @@ export default function Page() {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 glass rounded-xl border border-white/10 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 transition-all text-white placeholder-gray-500"
+                  className="w-full px-4 py-3 glass rounded-xl border border-white/10 focus:border-primary-purple focus:outline-none focus:ring-2 focus:ring-primary-purple/50 transition-all text-white placeholder-gray-500"
                   placeholder="john@example.com"
                 />
                 <p className="text-xs text-gray-500 mt-1">
@@ -111,7 +109,7 @@ export default function Page() {
                   type="tel"
                   id="phone"
                   name="phone"
-                  className="w-full px-4 py-3 glass rounded-xl border border-white/10 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 transition-all text-white placeholder-gray-500"
+                  className="w-full px-4 py-3 glass rounded-xl border border-white/10 focus:border-primary-purple focus:outline-none focus:ring-2 focus:ring-primary-purple/50 transition-all text-white placeholder-gray-500"
                   placeholder="+1 (555) 123-4567"
                 />
               </div>
@@ -128,42 +126,33 @@ export default function Page() {
                   id="service"
                   name="service"
                   required
-                  className="w-full px-4 py-3 glass rounded-xl border border-white/10 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 transition-all text-white bg-transparent"
+                  className="w-full px-4 py-3 glass rounded-xl border border-white/10 focus:border-primary-purple focus:outline-none focus:ring-2 focus:ring-primary-purple/50 transition-all text-white bg-transparent"
                 >
-                  <option value="" className="bg-gray-900">
+                  <option value="" className="bg-black">
                     Select a service
                   </option>
-                  <option value="AI Automation" className="bg-gray-900">
+                  <option value="AI Automation" className="bg-black">
                     AI Automation
                   </option>
-                  <option
-                    value="Agentic AI Development"
-                    className="bg-gray-900"
-                  >
+                  <option value="Agentic AI Development" className="bg-black">
                     Agentic AI Development
                   </option>
-                  <option value="AI Agents Development" className="bg-gray-900">
+                  <option value="AI Agents Development" className="bg-black">
                     AI Agents Development
                   </option>
-                  <option value="Web Development" className="bg-gray-900">
+                  <option value="Web Development" className="bg-black">
                     Web Development
                   </option>
-                  <option
-                    value="Mobile App Development"
-                    className="bg-gray-900"
-                  >
+                  <option value="Mobile App Development" className="bg-black">
                     Mobile App Development
                   </option>
-                  <option
-                    value="Blockchain Development"
-                    className="bg-gray-900"
-                  >
+                  <option value="Blockchain Development" className="bg-black">
                     Blockchain Development
                   </option>
-                  <option value="Website Optimization" className="bg-gray-900">
+                  <option value="Website Optimization" className="bg-black">
                     Website Optimization
                   </option>
-                  <option value="Consultation" className="bg-gray-900">
+                  <option value="Consultation" className="bg-black">
                     General Consultation
                   </option>
                 </select>
@@ -182,7 +171,7 @@ export default function Page() {
                   name="message"
                   required
                   rows="5"
-                  className="w-full px-4 py-3 glass rounded-xl border border-white/10 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/50 transition-all text-white placeholder-gray-500 resize-none"
+                  className="w-full px-4 py-3 glass rounded-xl border border-white/10 focus:border-primary-purple focus:outline-none focus:ring-2 focus:ring-primary-purple/50 transition-all text-white placeholder-gray-500 resize-none"
                   placeholder="Tell us about your project..."
                 ></textarea>
               </div>
@@ -190,7 +179,7 @@ export default function Page() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full px-8 py-4 rounded-xl text-center font-semibold bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-premium-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
+                className="w-full px-8 py-4 rounded-xl text-center font-semibold bg-primary-purple hover:bg-primary-purple-dark shadow-premium-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
               >
                 Send Message
               </button>
@@ -201,22 +190,22 @@ export default function Page() {
           <div className="space-y-6">
             {/* Contact Details */}
             <div className="glass-strong rounded-2xl p-8 shadow-premium">
-              <h2 className="text-2xl font-bold gradient-text mb-6">
+              <h2 className="text-2xl font-bold text-white mb-6">
                 Contact Information
               </h2>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <div className="p-3 glass rounded-xl">
-                    <HiMail className="text-2xl text-primary-blue" />
+                    <HiMail className="text-2xl text-primary-purple" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-white mb-1">Email</h3>
                     <a
-                      href="mailto:contact@boundlessbolt.com"
-                      className="text-gray-400 hover:text-primary-blue transition"
+                      href="mailto:boundlessbolt@gmail.com"
+                      className="text-gray-400 hover:text-primary-purple transition"
                     >
-                      contact@boundlessbolt.com
+                      boundlessbolt@gmail.com
                     </a>
                   </div>
                 </div>
@@ -238,7 +227,7 @@ export default function Page() {
 
                 <div className="flex items-start gap-4">
                   <div className="p-3 glass rounded-xl">
-                    <HiLocationMarker className="text-2xl text-accent-cyan" />
+                    <HiLocationMarker className="text-2xl text-primary-purple" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-white mb-1">Location</h3>
@@ -250,7 +239,7 @@ export default function Page() {
 
             {/* Social Media */}
             <div className="glass-strong rounded-2xl p-8 shadow-premium">
-              <h2 className="text-2xl font-bold gradient-text mb-6">
+              <h2 className="text-2xl font-bold text-white mb-6">
                 Connect With Us
               </h2>
 
@@ -259,7 +248,7 @@ export default function Page() {
                   href="https://x.com/davidchidev"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 glass rounded-xl hover:text-gray-400 transition-all duration-200 text-2xl hover:scale-110 hover:rotate-3 active:scale-90"
+                  className="p-4 glass rounded-xl text-white hover:text-primary-purple transition-all duration-200 text-2xl hover:scale-110 hover:rotate-3 active:scale-90"
                   aria-label="X (Twitter)"
                 >
                   <FaXTwitter />
@@ -268,7 +257,7 @@ export default function Page() {
                   href="https://github.com/mernking"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 glass rounded-xl hover:text-gray-400 transition-all duration-200 text-2xl hover:scale-110 hover:rotate-3 active:scale-90"
+                  className="p-4 glass rounded-xl text-white hover:text-primary-purple transition-all duration-200 text-2xl hover:scale-110 hover:rotate-3 active:scale-90"
                   aria-label="GitHub"
                 >
                   <FaGithub />
@@ -277,7 +266,7 @@ export default function Page() {
                   href="https://www.instagram.com/davidchidev"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 glass rounded-xl hover:text-accent-pink transition-all duration-200 text-2xl hover:scale-110 hover:rotate-3 active:scale-90"
+                  className="p-4 glass rounded-xl text-white hover:text-primary-purple transition-all duration-200 text-2xl hover:scale-110 hover:rotate-3 active:scale-90"
                   aria-label="Instagram"
                 >
                   <FaInstagram />
@@ -286,7 +275,7 @@ export default function Page() {
                   href="https://api.whatsapp.com/send?phone=2349035853253&text=Hello%20Boundless%20Bolt,%20I%20would%20like%20to%20discuss%20your%20services"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 glass rounded-xl hover:text-green-400 transition-all duration-200 text-2xl hover:scale-110 hover:rotate-3 active:scale-90"
+                  className="p-4 glass rounded-xl text-white hover:text-primary-purple transition-all duration-200 text-2xl hover:scale-110 hover:rotate-3 active:scale-90"
                   aria-label="WhatsApp"
                 >
                   <FaWhatsapp />
@@ -295,7 +284,7 @@ export default function Page() {
                   href="https://web.facebook.com/profile.php?id=61585469555973"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 glass rounded-xl hover:text-primary-blue transition-all duration-200 text-2xl hover:scale-110 hover:rotate-3 active:scale-90"
+                  className="p-4 glass rounded-xl text-white hover:text-primary-purple transition-all duration-200 text-2xl hover:scale-110 hover:rotate-3 active:scale-90"
                   aria-label="Facebook"
                 >
                   <FaFacebookF />
@@ -304,7 +293,7 @@ export default function Page() {
                   href="https://www.youtube.com/@boundlessbolt"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 glass rounded-xl hover:text-red-500 transition-all duration-200 text-2xl hover:scale-110 hover:rotate-3 active:scale-90"
+                  className="p-4 glass rounded-xl text-white hover:text-primary-purple transition-all duration-200 text-2xl hover:scale-110 hover:rotate-3 active:scale-90"
                   aria-label="YouTube"
                 >
                   <FaYoutube />
@@ -314,7 +303,7 @@ export default function Page() {
 
             {/* Business Hours */}
             <div className="glass-strong rounded-2xl p-8 shadow-premium">
-              <h2 className="text-2xl font-bold gradient-text mb-6">
+              <h2 className="text-2xl font-bold text-white mb-6">
                 Business Hours
               </h2>
 

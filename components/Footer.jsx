@@ -14,37 +14,31 @@ export default function Footer() {
       icon: <FaXTwitter />,
       href: "https://x.com/davidchidev",
       label: "X (Twitter)",
-      color: "hover:text-gray-400",
     },
     {
       icon: <FaGithub />,
       href: "https://github.com/mernking",
       label: "GitHub",
-      color: "hover:text-gray-400",
     },
     {
       icon: <FaInstagram />,
       href: "https://www.instagram.com/davidchidev",
       label: "Instagram",
-      color: "hover:text-accent-pink",
     },
     {
       icon: <FaWhatsapp />,
       href: "https://api.whatsapp.com/send?phone=2349035853253&text=Hello%20Boundless%20Bolt,%20I%20would%20like%20to%20discuss%20AI%20automation%20solutions",
       label: "WhatsApp",
-      color: "hover:text-green-400",
     },
     {
       icon: <FaFacebookF />,
       href: "https://web.facebook.com/profile.php?id=61585469555973",
       label: "Facebook",
-      color: "hover:text-primary-blue",
     },
     {
       icon: <FaYoutube />,
       href: "https://www.youtube.com/@boundlessbolt",
       label: "YouTube",
-      color: "hover:text-red-500",
     },
   ];
 
@@ -71,9 +65,8 @@ export default function Footer() {
 
       <div className="footgrid w-full grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl">
         {/* About Section */}
-        {/* About Section */}
         <div className="glass-strong rounded-2xl p-6 flex flex-col gap-4">
-          <h3 className="text-xl font-bold gradient-text">About Us</h3>
+          <h3 className="text-xl font-bold text-white">About Us</h3>
           <p className="text-gray-400 text-sm leading-relaxed">
             Boundless Bolt specializes in AI automation, agentic AI development,
             and intelligent agents. We help businesses leverage cutting-edge AI
@@ -81,12 +74,12 @@ export default function Footer() {
           </p>
           <div className="flex flex-col gap-2 text-sm text-gray-400">
             <div className="flex items-center gap-2">
-              <HiMail className="text-primary-blue" />
+              <HiMail className="text-primary-purple" />
               <a
-                href="mailto:contact@boundlessbolt.com"
-                className="hover:text-primary-blue transition"
+                href="mailto:boundlessbolt@gmail.com"
+                className="hover:text-primary-purple transition"
               >
-                contact@boundlessbolt.com
+                boundlessbolt@gmail.com
               </a>
             </div>
             <div className="flex items-center gap-2">
@@ -97,15 +90,14 @@ export default function Footer() {
         </div>
 
         {/* Quick Links */}
-        {/* Quick Links */}
         <div className="glass-strong rounded-2xl p-6 flex flex-col gap-4">
-          <h3 className="text-xl font-bold gradient-text">Quick Links</h3>
+          <h3 className="text-xl font-bold text-white">Quick Links</h3>
           <div className="flex flex-col gap-3">
             {footerLinks.map((link, index) => (
               <Link
                 key={index}
                 href={link.href}
-                className="text-gray-400 hover:text-primary-blue transition-colors duration-300 text-sm"
+                className="text-gray-400 hover:text-primary-purple transition-colors duration-300 text-sm"
               >
                 {link.name}
               </Link>
@@ -114,9 +106,8 @@ export default function Footer() {
         </div>
 
         {/* Connect With Us */}
-        {/* Connect With Us */}
         <div className="glass-strong rounded-2xl p-6 flex flex-col gap-4">
-          <h3 className="text-xl font-bold gradient-text">Connect With Us</h3>
+          <h3 className="text-xl font-bold text-white">Connect With Us</h3>
           <p className="text-gray-400 text-sm">
             Follow us on social media for updates, insights, and AI automation
             tips
@@ -128,7 +119,7 @@ export default function Footer() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`text-2xl p-3 glass rounded-xl ${social.color} transition-all duration-300 hover:scale-110 hover:rotate-3 active:scale-90`}
+                className="text-2xl p-3 glass rounded-xl text-white hover:text-primary-purple transition-all duration-300 hover:scale-110 hover:rotate-3 active:scale-90"
                 aria-label={social.label}
               >
                 {social.icon}

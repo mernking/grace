@@ -10,11 +10,13 @@ module.exports = {
       colors: {
         primary: {
           purple: "rgb(147, 51, 234)",
-          blue: "rgb(59, 130, 246)",
+          "purple-dark": "rgb(126, 34, 206)",
+          "purple-light": "rgb(168, 85, 247)",
         },
-        accent: {
-          cyan: "rgb(6, 182, 212)",
-          pink: "rgb(236, 72, 153)",
+        neutral: {
+          950: "rgb(10, 10, 15)",
+          900: "rgb(17, 17, 17)",
+          800: "rgb(38, 38, 38)",
         },
       },
       animation: {
@@ -28,10 +30,10 @@ module.exports = {
           "50%": { transform: "translateY(-10px)" },
         },
         "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 20px rgba(147, 51, 234, 0.4)" },
+          "0%, 100%": { boxShadow: "0 0 20px rgba(147, 51, 234, 0.3)" },
           "50%": {
             boxShadow:
-              "0 0 40px rgba(147, 51, 234, 0.6), 0 0 60px rgba(59, 130, 246, 0.4)",
+              "0 0 40px rgba(147, 51, 234, 0.5), 0 0 60px rgba(147, 51, 234, 0.3)",
           },
         },
         "gradient-shift": {
