@@ -54,7 +54,7 @@ export default function Page() {
               placeholder="Search projects..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full glass text-white placeholder:text-gray-500 border border-white/10 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-purple focus:border-primary-purple"
+              className="w-full glass text-white placeholder:text-gray-500 border border-white/10 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
             />
           </div>
 
@@ -69,7 +69,7 @@ export default function Page() {
               id="tag-filter"
               value={selectedTag}
               onChange={(e) => setSelectedTag(e.target.value)}
-              className="w-full glass text-white border border-white/10 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-purple focus:border-primary-purple bg-transparent"
+              className="w-full glass text-white border border-white/10 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary bg-transparent"
             >
               {allTags.map((tag, index) => (
                 <option key={index} value={tag} className="bg-black">

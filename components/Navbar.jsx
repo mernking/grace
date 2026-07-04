@@ -34,11 +34,7 @@ export default function Navbar() {
     <section className="w-full flex justify-center items-center relative z-50">
       <div className="max-w-[1200px] w-full">
         {/* Desktop Navbar */}
-        <div
-          className={`desktop w-full justify-between items-center px-6 py-4 flex transition-all duration-300 ${
-            scrolled ? "glass-strong shadow-premium-lg" : "bg-transparent"
-          }`}
-        >
+        <div className="desktop w-full justify-between items-center px-6 py-4 flex transition-all duration-300">
           <div className="logo text-2xl font-bold">
             <Link href="/">
               <h1 className="gradient-text text-3xl font-extrabold">
@@ -53,10 +49,10 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="relative group font-medium hover:text-primary-purple transition-colors duration-300"
+                className="relative group font-medium hover:text-primary transition-colors duration-300"
               >
                 {link.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-purple group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
               </Link>
             ))}
           </div>
@@ -75,13 +71,13 @@ export default function Navbar() {
 
         {/* Animated Mobile Menu */}
         {open && (
-          <div className="absolute w-full max-w-[1200px] glass-strong md:hidden overflow-hidden shadow-premium-lg">
+          <div className="absolute w-full max-w-[1200px] bg-[#090909] md:hidden overflow-hidden shadow-premium-lg">
             <div className="flex flex-col gap-2 p-4">
               {navLinks.map((link, i) => (
                 <div key={link.name} onClick={handleMenu}>
                   <Link
                     href={link.href}
-                    className="block w-full glass rounded-xl text-center text-white hover:bg-primary-purple py-3 transition-all font-medium"
+                    className="block w-full glass rounded-xl text-center text-white hover:bg-primary py-3 transition-all font-medium"
                   >
                     {link.name}
                   </Link>

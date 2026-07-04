@@ -2,14 +2,13 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Link from "next/link";
-import { FaInstagram, FaFacebookF, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaYoutube, FaGitlab } from "react-icons/fa";
 import {
   FaRegCircleUp,
   FaXTwitter,
   FaWhatsapp,
   FaGithub,
 } from "react-icons/fa6";
-import { TiInputChecked } from "react-icons/ti";
 
 export default function Hero() {
   return (
@@ -24,7 +23,7 @@ export default function Hero() {
       <div className="fixed right-4 bottom-8 z-50">
         <Link
           href="#"
-          className="block p-3 glass-strong rounded-full hover-glow text-2xl text-white hover:text-primary-purple transition-colors"
+          className="block p-3 glass-strong rounded-full hover-glow text-2xl text-white hover:text-primary transition-colors"
         >
           <FaRegCircleUp />
         </Link>
@@ -37,20 +36,18 @@ export default function Hero() {
 
         <div className="namedetail text-center text-xl sm:text-2xl mt-4 font-semibold">
           <p className="text-gray-300">
-            Building the Tech Behind Profitable, Scalable Businesses.
+            We Engineer{" "}
+            <span className="gradient-text">High-Performance Software</span> &
+            Process Automation.
           </p>
         </div>
 
         <div className="description text-center text-base sm:text-lg mt-4 max-w-xl text-gray-400 leading-relaxed">
           <p>
-            You have the vision; We handle the tech stack. <br /> Bridge the gap
-            between raw ideas and measurable business revenue. Whether it’s a
-            high-performance web projects or an automated AI workflow, We
-            engineer systems guaranteed to scale with your success.
-          </p>
-          <p className="flex flex-row gap-2 justify-center items-center py-4">
-            <TiInputChecked /> Scalable | <TiInputChecked />
-            Revenue-Focused
+            We specialize in cross-platform software speed optimization for web,
+            mobile, and desktop applications. By eliminating system lag,
+            reducing hardware overhead, and deploying custom workflow
+            automation, we help modern enterprises scale operations smoothly.
           </p>
         </div>
 
@@ -59,7 +56,7 @@ export default function Hero() {
             href="https://x.com/davidchidev"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-primary-purple transition-all duration-300 p-2 glass rounded-lg hover:scale-125 hover:rotate-3 active:scale-90"
+            className="text-white hover:text-primary transition-all duration-300 p-2 glass rounded-lg hover:scale-125 hover:rotate-3 active:scale-90"
             aria-label="x.com"
           >
             <FaXTwitter />
@@ -68,16 +65,25 @@ export default function Hero() {
             href="https://github.com/mernking"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-primary-purple transition-all duration-300 p-2 glass rounded-lg hover:scale-125 hover:rotate-3 active:scale-90"
+            className="text-white hover:text-primary transition-all duration-300 p-2 glass rounded-lg hover:scale-125 hover:rotate-3 active:scale-90"
             aria-label="github"
           >
             <FaGithub />
           </a>
           <a
+            href="https://gitlab.com/Godswork"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white hover:text-primary transition-all duration-300 p-2 glass rounded-lg hover:scale-125 hover:rotate-3 active:scale-90"
+            aria-label="github"
+          >
+            <FaGitlab />
+          </a>
+          <a
             href="https://www.instagram.com/davidchidev"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-primary-purple transition-all duration-300 p-2 glass rounded-lg hover:scale-125 hover:rotate-3 active:scale-90"
+            className="text-white hover:text-primary transition-all duration-300 p-2 glass rounded-lg hover:scale-125 hover:rotate-3 active:scale-90"
             aria-label="Instagram"
           >
             <FaInstagram />
@@ -86,16 +92,16 @@ export default function Hero() {
             href="https://api.whatsapp.com/send?phone=2349035853253&text=Hello%20Boundless%20Bolt,%20I%20would%20like%20to%20discuss%20AI%20automation%20solutions"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-primary-purple transition-all duration-300 p-2 glass rounded-lg hover:scale-125 hover:rotate-3 active:scale-90"
+            className="text-white hover:text-primary transition-all duration-300 p-2 glass rounded-lg hover:scale-125 hover:rotate-3 active:scale-90"
             aria-label="WhatsApp"
           >
             <FaWhatsapp />
           </a>
           <a
-            href="https://web.facebook.com/profile.php?id=61585469555973"
+            href="https://www.facebook.com/david.chiboy.92798/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-primary-purple transition-all duration-300 p-2 glass rounded-lg hover:scale-125 hover:rotate-3 active:scale-90"
+            className="text-white hover:text-primary transition-all duration-300 p-2 glass rounded-lg hover:scale-125 hover:rotate-3 active:scale-90"
             aria-label="Facebook"
           >
             <FaFacebookF />
@@ -104,7 +110,7 @@ export default function Hero() {
             href="https://www.youtube.com/@boundlessbolt"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-primary-purple transition-all duration-300 p-2 glass rounded-lg hover:scale-125 hover:rotate-3 active:scale-90"
+            className="text-white hover:text-primary transition-all duration-300 p-2 glass rounded-lg hover:scale-125 hover:rotate-3 active:scale-90"
             aria-label="YouTube"
           >
             <FaYoutube />
@@ -114,15 +120,15 @@ export default function Hero() {
         <div className="w-full flex flex-col md:flex-row gap-3 mt-6 justify-center items-center">
           <div className="w-full md:w-auto hover:scale-105 active:scale-95 transition-transform duration-200">
             <Link
-              className="w-full md:w-auto block px-8 py-3 rounded-xl text-center font-semibold bg-primary-purple hover:bg-primary-purple-dark shadow-premium-lg hover-glow transition-all"
+              className="w-full md:w-auto block px-8 py-3 rounded-xl text-center font-semibold bg-primary hover:bg-primary-dark shadow-premium-lg hover-glow transition-all"
               href="/contact"
             >
-              Get Started
+              Contact Us
             </Link>
           </div>
           <div className="w-full md:w-auto hover:scale-105 active:scale-95 transition-transform duration-200">
             <Link
-              className="w-full md:w-auto block px-8 py-3 rounded-xl text-center font-semibold glass-strong border border-primary-purple/30 hover:border-primary-purple hover-glow transition-all"
+              className="w-full md:w-auto block px-8 py-3 rounded-xl text-center font-semibold glass-strong border border-primary/30 hover:border-primary hover-glow transition-all"
               href="#service"
             >
               Our Services

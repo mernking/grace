@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaInstagram, FaFacebookF, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaYoutube, FaGitlab } from "react-icons/fa";
 import { FaXTwitter, FaWhatsapp, FaGithub } from "react-icons/fa6";
 import { HiMail, HiLocationMarker } from "react-icons/hi";
 
@@ -21,6 +21,11 @@ export default function Footer() {
       label: "GitHub",
     },
     {
+      icon: <FaGitlab />,
+      href: "https://gitlab.com/Godswork",
+      label: "GitLab",
+    },
+    {
       icon: <FaInstagram />,
       href: "https://www.instagram.com/davidchidev",
       label: "Instagram",
@@ -32,7 +37,7 @@ export default function Footer() {
     },
     {
       icon: <FaFacebookF />,
-      href: "https://web.facebook.com/profile.php?id=61585469555973",
+      href: "https://www.facebook.com/david.chiboy.92798/",
       label: "Facebook",
     },
     {
@@ -74,16 +79,16 @@ export default function Footer() {
           </p>
           <div className="flex flex-col gap-2 text-sm text-gray-400">
             <div className="flex items-center gap-2">
-              <HiMail className="text-primary-purple" />
+              <HiMail className="text-primary" />
               <a
                 href="mailto:boundlessbolt@gmail.com"
-                className="hover:text-primary-purple transition"
+                className="hover:text-primary transition"
               >
                 boundlessbolt@gmail.com
               </a>
             </div>
             <div className="flex items-center gap-2">
-              <HiLocationMarker className="text-primary-purple" />
+              <HiLocationMarker className="text-primary" />
               <span>Global Services</span>
             </div>
           </div>
@@ -97,7 +102,7 @@ export default function Footer() {
               <Link
                 key={index}
                 href={link.href}
-                className="text-gray-400 hover:text-primary-purple transition-colors duration-300 text-sm"
+                className="text-gray-400 hover:text-primary transition-colors duration-300 text-sm"
               >
                 {link.name}
               </Link>
@@ -119,7 +124,7 @@ export default function Footer() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-2xl p-3 glass rounded-xl text-white hover:text-primary-purple transition-all duration-300 hover:scale-110 hover:rotate-3 active:scale-90"
+                className="text-2xl p-3 glass rounded-xl text-white hover:text-primary transition-all duration-300 hover:scale-110 hover:rotate-3 active:scale-90"
                 aria-label={social.label}
               >
                 {social.icon}
@@ -132,8 +137,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="w-full max-w-6xl pt-8 border-t border-white/10 text-center">
         <p className="text-gray-500 text-sm">
-          © {currentYear} Boundless Bolt. All rights reserved. | Powered by AI
-          Innovation
+          © {currentYear} Boundless Bolt. All rights reserved.
         </p>
       </div>
     </section>

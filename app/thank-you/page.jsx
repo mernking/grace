@@ -8,7 +8,7 @@ export default function ThankYouPage() {
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="glass-strong rounded-2xl p-12 max-w-2xl w-full text-center shadow-premium-lg">
         <div className="mb-6 flex justify-center">
-          <div className="p-6 bg-primary-purple rounded-full">
+          <div className="p-6 bg-primary rounded-full">
             <HiCheckCircle className="text-6xl text-white" />
           </div>
         </div>
@@ -28,15 +28,15 @@ export default function ThankYouPage() {
           </h2>
           <ul className="text-gray-400 space-y-2 text-left">
             <li className="flex items-start gap-2">
-              <span className="text-primary-purple mt-1">✓</span>
+              <span className="text-primary mt-1">✓</span>
               <span>You&apos;ll receive a confirmation email shortly</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-primary-purple mt-1">✓</span>
+              <span className="text-primary mt-1">✓</span>
               <span>Our team will review your request</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-primary-purple mt-1">✓</span>
+              <span className="text-primary mt-1">✓</span>
               <span>
                 We&apos;ll reach out within 24 hours to discuss your project
               </span>
@@ -47,13 +47,13 @@ export default function ThankYouPage() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/"
-            className="px-8 py-3 rounded-xl text-center font-semibold bg-primary-purple hover:bg-primary-purple-dark shadow-premium-lg hover-glow transition-all"
+            className="px-8 py-3 rounded-xl text-center font-semibold bg-primary hover:bg-primary-dark shadow-premium-lg hover-glow transition-all"
           >
             Back to Home
           </Link>
           <Link
             href="/#service"
-            className="px-8 py-3 rounded-xl text-center font-semibold glass-strong border border-primary-purple/30 hover:border-primary-purple hover-glow transition-all"
+            className="px-8 py-3 rounded-xl text-center font-semibold glass-strong border border-primary/30 hover:border-primary hover-glow transition-all"
           >
             View Our Services
           </Link>

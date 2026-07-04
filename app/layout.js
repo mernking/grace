@@ -15,11 +15,10 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata = {
   title: {
-    default: "Boundless Bolt | Full-Stack Development & AI Solutions",
+    default: 'Boundless Bolt | High-Performance Software Engineering & Automation',
     template: "%s | Boundless Bolt",
   },
-  description:
-    "Boundless Bolt - Expert full-stack development, AI automation, intelligent agents, blockchain, and modern web solutions. Transform your business with cutting-edge technology.",
+  description: 'We optimize cross-platform software performance for web, mobile, and desktop apps. Eliminate system lag and build custom process automation engines.',
   keywords: [
     "AI automation",
     "agentic AI",
@@ -28,6 +27,7 @@ export const metadata = {
     "web development",
     "blockchain development",
     "mobile app development",
+    "Desktop app development",
     "Next.js development",
     "React development",
     "AI solutions",
@@ -121,8 +121,9 @@ export default function RootLayout({ children }) {
               sameAs: [
                 "https://x.com/davidchidev",
                 "https://github.com/mernking",
+                "https://gitlab.com/Godswork",
                 "https://www.instagram.com/davidchidev",
-                "https://web.facebook.com/profile.php?id=61585469555973",
+                "https://www.facebook.com/david.chiboy.92798/",
                 "https://www.youtube.com/@boundlessbolt",
               ],
               serviceType: [

@@ -15,7 +15,7 @@ export default function PortfolioCard({ item, index }) {
         >
           <div className="gridcard h-full glass-strong rounded-2xl overflow-hidden p-4 w-full flex flex-col card-hover shadow-premium group">
             <div className="image w-full overflow-hidden rounded-xl mb-4 relative">
-              <div className="absolute inset-0 bg-primary-purple/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+              <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
               <Image
                 className="w-full h-48 object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
                 alt={item.title}
@@ -26,7 +26,7 @@ export default function PortfolioCard({ item, index }) {
             </div>
 
             <div className="nametitle font-bold text-xl mb-2 text-center">
-              <p className="text-white group-hover:text-primary-purple transition-colors">
+              <p className="text-white group-hover:text-primary transition-colors">
                 {item.title}
               </p>
             </div>
@@ -40,7 +40,7 @@ export default function PortfolioCard({ item, index }) {
                 {item.tags.slice(0, 6).map((tag, i) => (
                   <span
                     key={i}
-                    className="text-xs glass px-3 py-1 rounded-full text-gray-300 border border-white/10 hover:border-primary-purple/50 transition-colors"
+                    className="text-xs glass px-3 py-1 rounded-full text-gray-300 border border-white/10 hover:border-primary/50 transition-colors"
                   >
                     {tag}
                   </span>

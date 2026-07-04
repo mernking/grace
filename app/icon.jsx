@@ -28,7 +28,7 @@ export default function Icon() {
           fontWeight: "bold",
         }}
       >
-        BB
+        B B
       </div>
     ),
     // ImageResponse options

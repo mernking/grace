@@ -31,7 +31,7 @@ export default function Portfolio() {
 
       <div className="w-full mt-8 flex justify-center hover:scale-105 active:scale-95 transition-transform duration-200">
         <Link
-          className="inline-block px-10 py-4 rounded-xl text-center font-semibold glass-strong border border-primary-purple/30 hover:border-primary-purple hover-glow transition-all text-lg"
+          className="inline-block px-10 py-4 rounded-xl text-center font-semibold glass-strong border border-primary/30 hover:border-primary hover-glow transition-all text-lg"
           href="/projects"
         >
           View All Projects
